@@ -1,8 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+
+// SERVICES
+import { AuthService } from './services/auth.service';
+import { RequireAuthService } from './guards/require-auth.service';
 
 // PAGES
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
@@ -27,13 +33,12 @@ import { BlogHeaderComponent } from './components/blog-header/blog-header.compon
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
 
-
 // ROUTES
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: WelcomePageComponent },
-  { path: 'login', component: LoginPageComponent },
-  { path: 'signup', component: SignupPageComponent },
+  { path: 'auth/login', component: LoginPageComponent },
+  { path: 'auth/signup', component: SignupPageComponent },
   { path: 'profile/settings', component: SettingsPageComponent },
   { path: 'user/:id', component:  ProfilePageComponent},
   { path: 'user/:id/blogs', component:  ProfilePageComponent},
@@ -69,9 +74,11 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [AuthService, RequireAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

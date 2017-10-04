@@ -1,14 +1,25 @@
 <h1><a [routerLink]="['/home']">minimo</a></h1>
-<form action="">
-  <input type="text">
-  <p>name</p>
-  <input type="text">
-  <p>email</p>
-  <input type="password">
-  <p>password</p>
-  <button>Sign Up</button>
+
+<form [ngClass]="{'has-error': error}" novalidate>
+  <div class="form-group field" [ngClass]="{'has-error': error}">
+    <input type="text" [(ngModel)]="user.name" name="name" required/>
+    <p>name</p>
+  </div>
+  <div class="form-group field" [ngClass]="{'has-error': error}">
+    <input type="email" [(ngModel)]="user.email" name="email" required/>
+    <p>email</p>
+  </div>
+  <div class="form-group field" [ngClass]="{'has-error': error}">
+    <input type="password" [(ngModel)]="user.password" name="password" required/>
+    <p>password</p>
+  </div>
+  <div class="form-group actions">
+    <button (click)="signup()">Sign Up</button>
+    <p *ngIf="error" class="error">{{error}}</p>
+  </div>
 </form>
+
 
 <p class="social">Add social media login component here</p>
 
-<p class="existing-user">Existing User? <a [routerLink]="['/login']">Log in</a></p>
+<p class="existing-user">Existing User? <a [routerLink]="['/auth/login']">Log in</a></p>
