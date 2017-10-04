@@ -1,0 +1,40 @@
+@import "responsive-font-size";
+
+h1 {
+  text-align: center;
+  margin-bottom: 10vh;
+  margin-top: 12vh;
+	@include responsive-font-size (4em, 6em, 375px, 1200px, 0.5em);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20vh;
+  font-weight: lighter;
+  padding: 0 15px;
+  @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
+}
+
+div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 250px;
+  margin-bottom: 3vh;
+}

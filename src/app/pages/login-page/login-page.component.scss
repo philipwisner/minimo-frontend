@@ -1,3 +1,52 @@
+@import "responsive-font-size";
+
+* {
+  text-align: center;
+}
+
 h1 {
-  color: red;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+	@include responsive-font-size (4em, 6em, 375px, 1200px, 0.5em);
+}
+
+input {
+  border: none;
+  border-bottom: .8px solid black;
+  min-width: 250px;
+  margin-bottom: 0;
+}
+
+form p {
+  margin-top: 5px;
+}
+
+
+button {
+  @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 230px;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+}
+
+
+.social {
+  margin-top: 5vh;
+}
+
+.new-user {
+  margin-top: 5vh;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
 }

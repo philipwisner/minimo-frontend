@@ -27,16 +27,18 @@ import { BlogHeaderComponent } from './components/blog-header/blog-header.compon
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
 
+
+// ROUTES
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: WelcomePageComponent },
   { path: 'login', component: LoginPageComponent },
   { path: 'signup', component: SignupPageComponent },
+  { path: 'profile/settings', component: SettingsPageComponent },
   { path: 'user/:id', component:  ProfilePageComponent},
   { path: 'user/:id/blogs', component:  ProfilePageComponent},
   { path: 'user/:id/blogs/:id', component:  BlogPageComponent},
   { path: 'profile/:id', component: ProfilePageComponent },
-  { path: 'profile/settings', component: ProfileSettingsComponent },
   { path: 'profile/:id/blogs', component: ProfilePageComponent },
   { path: 'profile/:id/blogs/:id', component: BlogPageComponent },
   { path: 'playground', component: PlaygroundComponent },
