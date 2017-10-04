@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from './app.component';
+
+// PAGES
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
+
+// COMPONENTS
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
@@ -21,9 +25,21 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogHeaderComponent } from './components/blog-header/blog-header.component';
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
+import { PlaygroundComponent } from './components/playground/playground.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'tasks', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: WelcomePageComponent },
+  { path: 'login', component: LoginPageComponent },
+  { path: 'signup', component: SignupPageComponent },
+  { path: 'user/:id', component:  ProfilePageComponent},
+  { path: 'user/:id/blogs', component:  ProfilePageComponent},
+  { path: 'user/:id/blogs/:id', component:  BlogPageComponent},
+  { path: 'profile/:id', component: ProfilePageComponent },
+  { path: 'profile/settings', component: ProfileSettingsComponent },
+  { path: 'profile/:id/blogs', component: ProfilePageComponent },
+  { path: 'profile/:id/blogs/:id', component: BlogPageComponent },
+  { path: 'playground', component: PlaygroundComponent },
 ];
 
 @NgModule({
@@ -47,6 +63,7 @@ const routes: Routes = [
     BlogCardComponent,
     BlogHeaderComponent,
     AddAPostComponent,
+    PlaygroundComponent
   ],
   imports: [
     BrowserModule,
