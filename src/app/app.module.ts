@@ -32,6 +32,8 @@ import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogHeaderComponent } from './components/blog-header/blog-header.component';
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
 import { PlaygroundComponent } from './components/playground/playground.component';
+import { AuthUserComponent } from './components/auth-user/auth-user.component';
+import { AuthLogoutComponent } from './components/auth-logout/auth-logout.component';
 
 // ROUTES
 const routes: Routes = [
@@ -70,7 +72,9 @@ const routes: Routes = [
     BlogCardComponent,
     BlogHeaderComponent,
     AddAPostComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    AuthUserComponent,
+    AuthLogoutComponent
   ],
   imports: [
     BrowserModule,
