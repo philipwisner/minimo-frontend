@@ -5,7 +5,7 @@
 }
 
 .welcome {
-  margin-top: 6vh;
+  margin-top: 2vh;
   margin-bottom: 0;
 	@include responsive-font-size (2.5em, 5em, 375px, 1200px, 0.5em);
 }
@@ -13,6 +13,7 @@
 .username {
   @include responsive-font-size (2.75em, 5.5em, 375px, 1200px, 0.5em);
   margin-top: 0;
+  margin-bottom: 3vh;
   font-weight: bold;
 }
 
@@ -27,8 +28,119 @@ form p {
   margin-top: 5px;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 80px;
+  border-radius: 100px;
+  border: .5px solid grey;
+}
 
-button {
+#add-desc {
+  margin-top: 5vh;
+  margin-bottom: 0;
+}
+
+#accent-select {
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+}
+
+#upload-btn {
+  border: none;
+  border-radius: 100px;
+  color: #505050;
+  background-color: #e2e2e2;
+  padding: 5px 20px;
+}
+
+.button-row {
+  margin-bottom: 20px;
+}
+
+#yellow {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: yellow;
+}
+
+#orange {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: orange;
+}
+
+#pink {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: pink;
+}
+
+#red {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: red;
+}
+
+#skyblue {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: lightblue;
+}
+
+#blue {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: blue;
+}
+
+#purple {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: purple;
+}
+
+#green {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: green;
+}
+
+#brown {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: brown;
+}
+
+#black {
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: black;
+}
+
+
+#save-btn {
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
   background-color: black;
   color: white;
@@ -41,18 +153,4 @@ button {
   width: 230px;
   margin-top: 5vh;
   margin-bottom: 3vh;
-}
-
-
-.social {
-  margin-top: 5vh;
-}
-
-.existing-user {
-  margin-top: 5vh;
-}
-
-a {
-  color: grey;
-  text-decoration: none;
 }

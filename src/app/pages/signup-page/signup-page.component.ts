@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -16,13 +17,19 @@ export class SignupPageComponent implements OnInit {
   });
 
   error: string;
+  message: string;
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private router: Router) { }
 
   signup() {
     this.error = null;
     this.auth.signup(this.user).subscribe(
-      (user) => this.user = user,
+      (user) => {
+      	if(user.email){
+      		this.user = user,
+      		this.router.navigate(['/profile/settings']);
+      	} else {this.message}
+      },
       (err) => this.error = err
     );
   }

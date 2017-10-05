@@ -1,19 +1,28 @@
 <app-navbar></app-navbar>
 <p class="welcome">welcome,</p>
-<p class="username">username</p>
+<p class="username">{{user && user.name}}</p>
 <form action="">
   <div>
-    <img src="" alt="">
-    <button>Upload Picture</button>
+    <img src="../../../assets/pictures/profile.png" alt="">
+    <button id="upload-btn">Upload Picture</button>
   </div>
-    <p>Add a description to your profile</p>
+    <p id="add-desc">Add a description to your profile</p>
     <input type="text">
-    <p>Chose your accent color</p>
-    <select name="colors" form="colors">
-      <option value="yellow">Yellow</option>
-      <option value="orange">Orange</option>
-      <option value="red">Pink</option>
-      <option value="skyblue">Sky Blue</option>
-    </select>
-    <button>Save</button>
+    <p id="accent-select">Chose your accent color</p>
+    <div class="button-row">
+      <button id="yellow"></button>
+      <button id="orange"></button>
+      <button id="pink"></button>
+      <button id="red"></button>
+      <button id="skyblue"></button>
+    </div>
+    <div class="button-row">
+      <button id="blue"></button>
+      <button id="purple"></button>
+      <button id="green"></button>
+      <button id="brown"></button>
+      <button id="black"></button>
+    </div>
+    <button id="save-btn">Save</button>
+    <button id="save-btn" (click)="logout()">logout</button>
 </form>

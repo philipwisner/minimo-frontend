@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { User } from '../../models/user';
 import { AuthService } from '../../services/auth.service';
 
@@ -13,18 +15,26 @@ export class LoginPageComponent implements OnInit {
     email: '',
     password: ''
   });
-  error: string;
 
-  constructor(private auth: AuthService) { }
+  error: string;
+  message: any;
+
+
+  constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
   login() {
-    this.error = null;
-    this.auth.login(this.user).subscribe(
-      (user) => this.user = user,
-      (err) => this.error = err
-    );
-  }
+      this.error = null;
+      this.auth.login(this.user).subscribe(
+        (user) => {
+        	if(user.email){
+        		this.user = user,
+        		this.router.navigate(['/profile']);
+        	} else {this.message}
+        },
+        (err) => this.error = err
+      );
+    }
 }

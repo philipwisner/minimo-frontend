@@ -30,8 +30,7 @@ button {
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
   background-color: black;
   color: white;
-  font-weight: bold;
-  text-transform: uppercase;
+  text-transform: lowercase;
   border: none;
   border-radius: 100px;
   padding: 10px 20px;
@@ -41,10 +40,22 @@ button {
   margin-bottom: 3vh;
 }
 
+//Inverse button color
+// button {
+//   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
+//   background-color: white;
+//   color: black;
+//   text-transform: lowercase;
+//   border: none;
+//   border: 1px solid black;
+//   border-radius: 100px;
+//   padding: 10px 20px;
+//   text-align: center;
+//   width: 230px;
+//   margin-top: 5vh;
+//   margin-bottom: 3vh;
+// }
 
-.social {
-  margin-top: 5vh;
-}
 
 .existing-user {
   margin-top: 5vh;

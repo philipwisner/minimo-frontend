@@ -20,8 +20,6 @@ import { BlogPageComponent } from './pages/blog-page/blog-page.component';
 
 // COMPONENTS
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginFormComponent } from './components/login-form/login-form.component';
-import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { SocialSigninComponent } from './components/social-signin/social-signin.component';
 import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
 import { ProfileHeaderComponent } from './components/profile-header/profile-header.component';
@@ -42,6 +40,7 @@ const routes: Routes = [
   { path: 'auth/login', component: LoginPageComponent },
   { path: 'auth/signup', component: SignupPageComponent },
   { path: 'profile/settings', component: SettingsPageComponent },
+  { path: 'profile', component: ProfilePageComponent },
   { path: 'user/:id', component:  ProfilePageComponent},
   { path: 'user/:id/blogs', component:  ProfilePageComponent},
   { path: 'user/:id/blogs/:id', component:  BlogPageComponent},
@@ -61,8 +60,6 @@ const routes: Routes = [
     ProfilePageComponent,
     BlogPageComponent,
     NavbarComponent,
-    LoginFormComponent,
-    SignupFormComponent,
     SocialSigninComponent,
     ProfileSettingsComponent,
     ProfileHeaderComponent,
