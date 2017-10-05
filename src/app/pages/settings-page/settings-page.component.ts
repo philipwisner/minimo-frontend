@@ -17,5 +17,8 @@ export class SettingsPageComponent implements OnInit {
     this.auth.userChange$.subscribe((user) => this.user = user);
   }
 
+  logout() {
+    this.auth.logout().subscribe();
+  }
 
 }
