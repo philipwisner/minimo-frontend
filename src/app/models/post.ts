@@ -2,6 +2,7 @@ export class Post {
   user_id: string;
   blog_id: string; //can have none
   heading: string;
+  content: string;
   date: Date;
 
   constructor() {
