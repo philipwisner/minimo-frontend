@@ -1,9 +1,9 @@
 export class Post {
-  user_id: string;
-  blog_id: string; //can have none
-  heading: string;
-  content: string;
-  date: Date;
+  userId: string;
+  blogId: string; //can have none
+  postTitle: string;
+  postContent: string;
+  postDate: Date;
 
   constructor() {
   }

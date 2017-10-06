@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 
 // SERVICES
 import { AuthService } from './services/auth.service';
+import { PostService } from './services/posts.service';
+
 import { RequireAuthService } from './guards/require-auth.service';
 
 // PAGES
@@ -80,7 +82,7 @@ const routes: Routes = [
     HttpModule,
     FormsModule
   ],
-  providers: [AuthService, RequireAuthService],
+  providers: [AuthService, RequireAuthService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

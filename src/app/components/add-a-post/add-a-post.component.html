@@ -1,20 +1,15 @@
-<form action="">
-  <input type="text">
-  <textarea name="name" rows="20" cols="80"></textarea>
+  <h2>Create Post</h2>
 
-  <button>post</button>
-</form>
-
-I need to save the:
-user_id: string;
-blog_id: string; //can have none
-heading: string;
-date: Date;
-
-
-export class Post {
-  user_id: string;
-  blog_id: string; //can have none
-  heading: string;
-  content: string;
-  date: Date;
+  <form class="create-post" (ngSubmit)="handleCreatePostForm(myForm)" #myForm="ngForm" novalidate>
+    <div class="field">
+      <label>Post Title</label>
+      <input type="text" name="postTitle" placeholder="Post Title" #myPostTitle=ngModel [(ngModel)]="formData.postTitle">
+    </div>
+    <div class="field">
+      <label>Post Body</label>
+      <textarea type="text" name="postContent" #myPostBody=ngModel [(ngModel)]="formData.postContent"></textarea>
+    </div>
+    <div class="field">
+      <button type="submit">Post</button>
+    </div>
+  </form>
