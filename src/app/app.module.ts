@@ -4,7 +4,11 @@ import { RouterModule, Routes } from "@angular/router";
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
+// MAIN APP
 import { AppComponent } from './app.component';
+
+// PIPES
+import { DatePipe } from '@angular/common';
 
 // SERVICES
 import { AuthService } from './services/auth.service';

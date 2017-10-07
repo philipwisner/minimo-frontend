@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/posts.service';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
+import { Router } from '@angular/router';
 
 const baseUrl = 'http://localhost:3000';
 const URL = baseUrl + '/posts';
@@ -19,7 +20,7 @@ export class AddAPostComponent implements OnInit {
     postContent: '',
   };
 
-  constructor(private postService: PostService, private authService: AuthService) { }
+  constructor(private postService: PostService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -27,5 +28,7 @@ export class AddAPostComponent implements OnInit {
   private handleCreatePostForm(myForm) {
     this.postService.insertNew(this.formData).
      subscribe();
+     this.router.navigate(['/profile']);
   }
+
 }

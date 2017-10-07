@@ -1,15 +1,12 @@
   <h2>Create Post</h2>
-
   <form class="create-post" (ngSubmit)="handleCreatePostForm(myForm)" #myForm="ngForm" novalidate>
     <div class="field">
-      <label>Post Title</label>
-      <input type="text" name="postTitle" placeholder="Post Title" #myPostTitle=ngModel [(ngModel)]="formData.postTitle">
+      <input type="text" id="post-title" name="postTitle" placeholder="Post Title" #myPostTitle=ngModel [(ngModel)]="formData.postTitle">
     </div>
     <div class="field">
-      <label>Post Body</label>
-      <textarea type="text" name="postContent" #myPostBody=ngModel [(ngModel)]="formData.postContent"></textarea>
+      <textarea type="text" id="post-content" name="postContent" placeholder="Post Body" #myPostBody=ngModel [(ngModel)]="formData.postContent" ></textarea>
     </div>
     <div class="field">
-      <button type="submit">Post</button>
+      <button type="submit" id="submit-btn">Post</button>
     </div>
   </form>

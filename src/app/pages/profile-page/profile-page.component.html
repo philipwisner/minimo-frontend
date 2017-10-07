@@ -1,6 +1,7 @@
 <app-navbar></app-navbar>
 
-<p>{{user && user.name}}</p>
-<p>{{user && user.email}}</p>
+<app-profile-header></app-profile-header>
 
 <app-post-list></app-post-list>
+
+<button id="add" [routerLink]="['/profile/createpost']">+</button>

@@ -1,0 +1,27 @@
+@import "../../../responsive-font-size";
+
+.username {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  @include responsive-font-size (1.75em, 3.2em, 375px, 1200px, 0.5em);
+}
+
+.button-row {
+  text-align: center;
+}
+
+button {
+  @include responsive-font-size (.7em, 1.2em, 375px, 1200px, 0.5em);
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  margin: 0 20px;
+  border-radius: 100px;
+  padding: 5px 20px;
+  text-align: center;
+  width: 124px;
+  margin-bottom: 3vh;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
