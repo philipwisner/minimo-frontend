@@ -1,8 +1,13 @@
-<p class="username">{{user && user.name}}</p>
-<p class=user-description>{{user && user.description}}</p>
+<div class="profile-info">
+  <img src="../../../assets/pictures/profile.png" alt="profile picture">
+  <div class="profile-text">
+    <p class="username">{{user && user.name}}</p>
+    <p class=user-description>{{user && user.description}}</p>
+  </div>
+</div>
 <div class="button-row">
-  <button class="posts">Posts</button>
-  <button class="blogs">Blogs</button>
+  <button class="posts active">Posts</button>
+  <button class="blogs inactive">Blogs</button>
 </div>
 <select name="sortby" id="sortby">
   <option value="" selected disabled hidden>Sort by</option>

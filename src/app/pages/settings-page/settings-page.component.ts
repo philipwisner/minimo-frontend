@@ -20,10 +20,6 @@ export class SettingsPageComponent implements OnInit {
     this.subscriptions.push(subscription);
   }
 
-  logout() {
-    this.auth.logout().subscribe();
-  }
-
   ngOnDestroy() {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }

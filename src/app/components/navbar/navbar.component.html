@@ -1,8 +1,9 @@
 <header>
+  <button><img src="../../../assets/pictures/profile.png" alt="profile picture"></button>
   <a [routerLink]="['/auth/login']">Log in</a>
   <a [routerLink]="['/auth/signup']">Sign up</a>
   <a [routerLink]="['/home']" id="home">Minimo</a>
   <a [routerLink]="['/profile']">Profile</a>
   <a [routerLink]="['/profile/settings']">Settings</a>
-  <a [routerLink]="['/profile/createpost']">Create Post</a>
+  <button (click)="logout()">Logout</button>
 </header>

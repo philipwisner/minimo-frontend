@@ -1,5 +1,22 @@
 @import "../../../responsive-font-size";
 
+.profile-info {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+img {
+  margin: 0 auto;
+  max-width: 80px;
+  border-radius: 100px;
+  border: .5px solid grey;
+  float: left;
+}
+
+.profile-text {
+  margin: 0 auto;
+}
+
 .username {
   text-transform: uppercase;
   font-weight: bold;
@@ -11,7 +28,9 @@
 
 .user-description {
   text-align: center;
+  margin: 0 auto;
   margin-top: 0;
+  max-width: 350px;
   font-family: 'Work Sans Pro', sans-serif;
 }
 
@@ -29,7 +48,7 @@ select {
     margin-bottom: 10px;
 }
 
-button {
+.active {
   @include responsive-font-size (.7em, 1.2em, 375px, 1200px, 0.5em);
   background-color: black;
   color: white;
@@ -44,4 +63,20 @@ button {
   width: 124px;
   margin-bottom: 3vh;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.inactive {
+  @include responsive-font-size (.7em, 1.2em, 375px, 1200px, 0.5em);
+  background-color: #eeeeee;
+  color: grey;
+  text-transform: uppercase;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
+  margin: 0 20px;
+  border: none;
+  border-radius: 100px;
+  padding: 5px 20px 3px 20px;
+  text-align: center;
+  width: 124px;
+  margin-bottom: 3vh;
 }

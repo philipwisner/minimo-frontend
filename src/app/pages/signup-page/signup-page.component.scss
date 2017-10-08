@@ -5,12 +5,26 @@
 }
 
 h1 {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
   margin-top: 6vh;
   margin-bottom: 8vh;
 	@include responsive-font-size (4em, 6em, 375px, 1200px, 0.5em);
   a {
     color: black;
   }
+}
+
+// .mi {
+//   font-weight: 400;
+// }
+//
+.ni {
+  font-weight: 300;
+}
+
+.mo {
+  font-weight: 100;
 }
 
 .error {
