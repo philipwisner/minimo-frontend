@@ -1,22 +1,90 @@
+@import "../../../responsive-font-size";
+
 header {
   max-width: 800px;
   text-align: center;
   height: 6vh;
 }
 
-button {
-  padding: 0;
-  border-radius: 100px;
-  float: left;
-  border: none;
+.minimo-header {
+  text-align: center;
+  display: inline;
+  font-family: 'Heebo', sans-serif;
+  @include responsive-font-size (1.3em, 2.3em, 375px, 1200px, 0.5em);
+  font-weight: 600;
+  a {
+    color: black;
+    text-decoration: none;
+  }
 }
 
-img {
+
+
+.minimo {
+  position: relative;
+  top: 65vh;
+  font-family: 'Heebo', sans-serif;
+  @include responsive-font-size (1.3em, 2.3em, 375px, 1200px, 0.5em);
+  font-weight: 600;
+}
+
+
+.profile-pic {
   max-width: 35px;
+  float: left;
   border-radius: 100px;
   border: .5px solid grey;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 8px;
+  z-index: 2;
+}
+
+.logo-m {
+  max-width: 40px;
+  float: right;
 }
 
 #home {
   text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.left-nav {
+  height: 100vh;
+  width: 40vw;
+  padding: 50px 0 0 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
+  a {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Heebo', sans-serif;
+    @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
+    font-weight: 600;
+  }
+  h3 {
+    text-transform: uppercase;
+    font-family: 'Heebo', sans-serif;
+    @include responsive-font-size (1.1em, 2em, 375px, 1200px, 0.5em);
+    font-weight: 600;
+  }
+  button {
+    background-color: white;
+    border: none;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Heebo', sans-serif;
+    @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
+    font-weight: 600;
+  }
 }

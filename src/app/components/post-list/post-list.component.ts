@@ -3,6 +3,7 @@ import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
@@ -20,12 +21,6 @@ export class PostListComponent implements OnInit, OnDestroy {
     this.subscriptions.push(subscription);
   }
 
-  //need a function to check if there are any posts with current user's userId
-  //or push all post ids into user db as an array.
-
-  logout() {
-    this.auth.logout().subscribe();
-  }
 
   ngOnDestroy() {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
