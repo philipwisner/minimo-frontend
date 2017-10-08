@@ -1,24 +1,37 @@
 <h1><a [routerLink]="['/home']">minimo</a></h1>
 
-<form [ngClass]="{'has-error': error}" novalidate>
+<form [ngClass]="{'has-error': error}" #myForm="ngForm" novalidate>
   <div class="form-group field" [ngClass]="{'has-error': error}">
-    <input type="text" [(ngModel)]="user.name" name="name" required/>
+    <input type="text" [(ngModel)]="user.name" name="name" #myName=ngModel required/>
     <p>name</p>
   </div>
-  <div class="form-group field" [ngClass]="{'has-error': error}">
-    <input type="email" [(ngModel)]="user.email" name="email" required/>
-    <p>email</p>
+  <div *ngIf="myName.errors && (myName.dirty || myName.touched)">
+      <p class="error" [hidden]="!myName.errors.required">
+        Please enter your name
+      </p>
   </div>
   <div class="form-group field" [ngClass]="{'has-error': error}">
-    <input type="password" [(ngModel)]="user.password" name="password" required/>
+    <input type="email" [(ngModel)]="user.email" name="email" #myEmail=ngModel required/>
+    <p>email</p>
+  </div>
+  <div *ngIf="myEmail.errors && (myEmail.dirty || myEmail.touched)">
+      <p class="error" [hidden]="!myEmail.errors.required">
+        Please enter your email
+      </p>
+  </div>
+  <div class="form-group field" [ngClass]="{'has-error': error}">
+    <input type="password" [(ngModel)]="user.password" name="password" #myPassword=ngModel required/>
     <p>password</p>
+  </div>
+  <div *ngIf="myPassword.errors && (myPassword.dirty || myPassword.touched)">
+      <p class="error" [hidden]="!myPassword.errors.required">
+        Please enter a password
+      </p>
   </div>
   <div class="form-group actions">
     <button (click)="signup()">Sign Up</button>
-    <p *ngIf="error" class="error">{{error}}</p>
   </div>
 </form>
-
 
 <app-social-signin></app-social-signin>
 

@@ -12,7 +12,6 @@ import { DatePipe } from '@angular/common'
 })
 export class PostCardComponent implements OnInit {
   posts: Object[];
-  date = Date();
 
   constructor(private postService: PostService, private authService: AuthService) { }
 

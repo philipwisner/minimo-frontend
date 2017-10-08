@@ -25,13 +25,17 @@ form p {
   margin-top: 5px;
 }
 
+.error {
+  color: grey;
+}
+
+
 
 button {
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
   background-color: black;
   color: white;
-  font-weight: bold;
-  text-transform: uppercase;
+  text-transform: lowercase;
   border: none;
   border-radius: 100px;
   padding: 10px 20px;

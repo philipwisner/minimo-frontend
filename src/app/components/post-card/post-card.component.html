@@ -1,6 +1,6 @@
 <div *ngFor="let post of posts" class="post-card">
   <h1> {{post.postTitle}} </h1>
-  <p> {{post.postDate}} {{date | date:'d MMM y h:mm a'}} </p>
+  <p> {{ post.postDate | date:'d MMM y h:mm a'}} </p>
   <p> {{post.postContent}} </p>
   <button>Read More</button>
 </div>

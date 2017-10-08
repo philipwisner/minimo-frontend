@@ -1,12 +1,24 @@
   <h2>Create Post</h2>
   <form class="create-post" (ngSubmit)="handleCreatePostForm(myForm)" #myForm="ngForm" novalidate>
     <div class="field">
-      <input type="text" id="post-title" name="postTitle" placeholder="Post Title" #myPostTitle=ngModel [(ngModel)]="formData.postTitle">
+      <input type="text" id="post-title" name="postTitle" placeholder="Post Title" #myPostTitle=ngModel [(ngModel)]="formData.postTitle" required>
     </div>
     <div class="field">
-      <textarea type="text" id="post-content" name="postContent" placeholder="Post Body" #myPostBody=ngModel [(ngModel)]="formData.postContent" ></textarea>
+      <textarea type="text" id="post-content" name="postContent" placeholder="Post Body" #myPostBody=ngModel [(ngModel)]="formData.postContent" required></textarea>
     </div>
-    <div class="field">
+    <div class="field" *ngIf="!myPostTitle.errors && !myPostBody.errors">
       <button type="submit" id="submit-btn">Post</button>
     </div>
   </form>
+
+  <div *ngIf="myPostTitle.errors && (myPostTitle.dirty || myPostTitle.touched)">
+      <p class="error" [hidden]="!myPostTitle.errors">
+        You must enter a Post Title.
+      </p>
+  </div>
+
+  <div *ngIf="myPostBody.errors && (myPostBody.dirty || myPostBody.touched)">
+      <p class="error" [hidden]="!myPostBody.errors">
+        You must enter Post Content.
+      </p>
+  </div>
