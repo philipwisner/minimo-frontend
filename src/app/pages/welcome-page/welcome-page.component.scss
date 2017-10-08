@@ -3,14 +3,29 @@
 h1 {
   text-align: center;
   margin-bottom: 10vh;
-  margin-top: 12vh;
+  margin-top: 14vh;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 500;
 	@include responsive-font-size (4em, 6em, 375px, 1200px, 0.5em);
+}
+
+// .mi {
+//   font-weight: 400;
+// }
+//
+.ni {
+  font-weight: 300;
+}
+
+.mo {
+  font-weight: 100;
 }
 
 h3 {
   text-align: center;
   margin-bottom: 20vh;
   font-weight: lighter;
+  font-family: 'Work Sans', sans-serif;
   padding: 0 15px;
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
 }
@@ -28,6 +43,7 @@ a {
 button {
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
   background-color: black;
+  font-family: 'Heebo', sans-serif;
   color: white;
   text-transform: lowercase;
   border: none;

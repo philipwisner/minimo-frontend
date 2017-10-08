@@ -48,6 +48,7 @@ const routes: Routes = [
   { path: 'profile/settings', component: SettingsPageComponent },
   { path: 'profile', component: ProfilePageComponent },
   { path: 'profile/createpost', component: AddAPostComponent },
+
   { path: 'user/:id', component:  ProfilePageComponent},
   { path: 'user/:id/blogs', component:  ProfilePageComponent},
   { path: 'user/:id/blogs/:id', component:  BlogPageComponent},
