@@ -1,0 +1,25 @@
+<h2>Create Blog</h2>
+<form class="create-blog" (ngSubmit)="handleCreateBlogForm(myForm)" #myForm="ngForm" novalidate>
+  <div class="field">
+    <input type="text" id="blog-name" name="blogName" placeholder="Blog Name" #myBlogName=ngModel [(ngModel)]="formData.blogName" required>
+  </div>
+  <div class="field">
+    <input type="text" id="blog-description" name="blogDescription" placeholder="Blog Description" #myBlogBody=ngModel [(ngModel)]="formData.blogDescription" required>
+  </div>
+  <div class="field" *ngIf="!myBlogName.errors && !myBlogBody.errors">
+    <button type="submit" id="submit-btn">Create Blog</button>
+  </div>
+
+</form>
+
+<div *ngIf="myBlogName.errors && (myBlogName.dirty || myBlogName.touched)">
+    <p class="error" [hidden]="!myBlogName.errors">
+      You must enter a Blog Name.
+    </p>
+</div>
+
+<div *ngIf="myBlogBody.errors && (myBlogBody.dirty || myBlogBody.touched)">
+    <p class="error" [hidden]="!myBlogBody.errors">
+      You must enter Blog Description.
+    </p>
+</div>

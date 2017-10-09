@@ -13,7 +13,7 @@ import { DatePipe } from '@angular/common';
 // SERVICES
 import { AuthService } from './services/auth.service';
 import { PostService } from './services/posts.service';
-
+import { BlogService } from './services/blog.service';
 import { RequireAuthService } from './guards/require-auth.service';
 
 // PAGES
@@ -35,10 +35,10 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogHeaderComponent } from './components/blog-header/blog-header.component';
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
-import { PlaygroundComponent } from './components/playground/playground.component';
 import { AuthUserComponent } from './components/auth-user/auth-user.component';
 import { AuthLogoutComponent } from './components/auth-logout/auth-logout.component';
 import { AddAPostIconComponent } from './components/add-a-post-icon/add-a-post-icon.component';
+import { AddABlogComponent } from './components/add-a-blog/add-a-blog.component';
 
 // ROUTES
 const routes: Routes = [
@@ -49,6 +49,7 @@ const routes: Routes = [
   { path: 'profile/settings', component: SettingsPageComponent, canActivate: [ RequireAuthService ]},
   { path: 'profile', component: ProfilePageComponent },
   { path: 'profile/createpost', component: AddAPostComponent },
+  { path: 'profile/createblog', component: AddABlogComponent },
   { path: 'profile/blogs', component: BlogPageComponent },
   { path: 'profile/blogs/:id', component: BlogHomePageComponent },
 
@@ -58,7 +59,6 @@ const routes: Routes = [
   { path: 'profile/:id', component: ProfilePageComponent },
   { path: 'profile/:id/blogs', component: ProfilePageComponent },
   { path: 'profile/:id/blogs/:id', component: BlogPageComponent },
-  { path: 'playground', component: PlaygroundComponent },
 ];
 
 @NgModule({
@@ -80,10 +80,10 @@ const routes: Routes = [
     BlogCardComponent,
     BlogHeaderComponent,
     AddAPostComponent,
-    PlaygroundComponent,
     AuthUserComponent,
     AuthLogoutComponent,
-    AddAPostIconComponent
+    AddAPostIconComponent,
+    AddABlogComponent
   ],
   imports: [
     BrowserModule,
@@ -91,7 +91,7 @@ const routes: Routes = [
     HttpModule,
     FormsModule
   ],
-  providers: [AuthService, RequireAuthService, PostService],
+  providers: [AuthService, RequireAuthService, PostService, BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

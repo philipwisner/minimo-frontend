@@ -9,6 +9,16 @@
     <div class="field" *ngIf="!myPostTitle.errors && !myPostBody.errors">
       <button type="submit" id="submit-btn">Post</button>
     </div>
+    <div>
+      <input type="checkbox" name="addtoblog" value="yes" #myCheckBox=ngModel [(ngModel)]="addToBlog">Add to Blog<br>
+    </div>
+    <div *ngIf="addToBlog.value === yes">
+      <select name="blog" id="blog-name">
+        <option value="" selected disabled hidden>Select Blog</option>
+        <option value="newBlog">New Blog</option>
+        <option value="Blog2">Blog 2</option>
+      </select>
+    </div>
   </form>
 
   <div *ngIf="myPostTitle.errors && (myPostTitle.dirty || myPostTitle.touched)">
