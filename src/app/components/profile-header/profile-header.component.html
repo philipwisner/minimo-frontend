@@ -2,7 +2,8 @@
   <img src="../../../assets/pictures/profile.png" alt="profile picture">
   <div class="profile-text">
     <p class="username">{{user && user.name}}</p>
-    <p class=user-description>{{user && user.description}}</p>
+    <p *ngIf="user.description" class=user-description>{{user && user.description}}</p>
+
   </div>
 </div>
 <div class="button-row">

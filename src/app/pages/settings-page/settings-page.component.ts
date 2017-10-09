@@ -1,10 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { environment } from '../../../environments/environment';
 
 const baseUrl = 'http://localhost:3000';
-const URL = baseUrl + '/posts';
+const URL = baseUrl + '/auth/users';
 
 @Component({
   selector: 'app-settings-page',
@@ -12,13 +13,13 @@ const URL = baseUrl + '/posts';
   styleUrls: ['./settings-page.component.scss']
 })
 export class SettingsPageComponent implements OnInit {
-  user: User;
-  subscriptions = [];
+  @Input() userId;
+  apiUrl = environment.apiUrl;
   userData: Object;
+  user: User;
+  editUser: User;
 
-  formData = {
-    userDescription: '',
-  };
+  subscriptions = [];
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -32,15 +33,9 @@ export class SettingsPageComponent implements OnInit {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
-  private handleUpdateUserInfo(myForm) {
-    this.auth.insertNew(this.formData).subscribe();
-    this.auth.getPostList().subscribe((data) => {
-      this.user = data;
-      this.router.navigate(['/profile']);
-     });
+  updateUserInfo() {
+    this.auth.updateUser(this.editUser).subscribe();
+    this.editUser = new User(this.user);
   }
-  //function to do an update to a user from user service!
-
-
 
 }

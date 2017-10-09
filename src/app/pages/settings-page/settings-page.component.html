@@ -2,13 +2,13 @@
 <p class="welcome">hello,</p>
 <p class="username">{{user && user.name}}</p>
 
-<form (ngSubmit)="handleUpdateUserInfo(myForm)" #myForm="ngForm" novalidate>
+<form novalidate>
   <div>
     <img src="../../../assets/pictures/profile.png" alt="profile picture">
     <button id="upload-btn">Upload Picture</button>
   </div>
     <p id="add-desc">Add a description to your profile</p>
-      <input type="text" id="user-description" name="userDescription" placeholder="Add a Description" #myUserDescription=ngModel [(ngModel)]="formData.userDescription"/>
+      <input type="text" id="user-description" name="description" #myUserDescription=ngModel [(ngModel)]="editUser.description"/>
     <p id="accent-select">Chose your accent color</p>
     <div class="button-row">
       <button id="yellow"></button>
@@ -24,5 +24,5 @@
       <button id="brown"></button>
       <button id="black"></button>
     </div>
-    <button id="save-btn" type="submit">Save</button>
+    <button id="save-btn" type="submit" (click)="updateUserInfo()">Save</button>
 </form>

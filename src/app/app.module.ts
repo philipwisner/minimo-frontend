@@ -28,7 +28,6 @@ import { BlogHomePageComponent } from './pages/blog-home-page/blog-home-page.com
 // COMPONENTS
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SocialSigninComponent } from './components/social-signin/social-signin.component';
-import { ProfileSettingsComponent } from './components/profile-settings/profile-settings.component';
 import { ProfileHeaderComponent } from './components/profile-header/profile-header.component';
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
@@ -74,7 +73,6 @@ const routes: Routes = [
     BlogHomePageComponent,
     NavbarComponent,
     SocialSigninComponent,
-    ProfileSettingsComponent,
     ProfileHeaderComponent,
     PostListComponent,
     PostCardComponent,
