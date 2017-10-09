@@ -11,6 +11,8 @@ import { AuthService } from '../../services/auth.service';
 export class ProfileHeaderComponent implements OnInit {
   user: User;
   subscriptions = [];
+  hasInactive = false;
+  hasActive = true;
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -24,4 +26,10 @@ export class ProfileHeaderComponent implements OnInit {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
-}
+  toggleClass() {
+    this.hasInactive = true;
+    this.hasActive = false;
+    //need to toggle adding and removing the class active & inactive
+    }
+
+  }

@@ -13,27 +13,27 @@ button {
 h1 {
   font-family: 'Heebo', sans-serif;
   margin: 0 auto;
-  @include responsive-font-size (1.7em, 3em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (1.7em, 2em, 375px, 1200px, 0.5em);
 }
 
 .post-date {
   font-family: 'Source Sans Pro', sans-serif;
   color: grey;
   margin: 0 auto;
-  @include responsive-font-size (.7em, 1.7em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (.7em, 1em, 375px, 1200px, 0.5em);
 }
 
 .post-content {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 10px 0 15px 0;
-  @include responsive-font-size (.65em, 2em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (.65em, 1.2em, 375px, 1200px, 0.5em);
 }
 
 .post-card {
   box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
   margin-bottom: 10px;
   padding: 10px 15px;
-  border: .1px solid rgba(0,0,0,0.16);
+  border: .2px solid rgba(0,0,0,0.16);
 }
 
 .no-posts {

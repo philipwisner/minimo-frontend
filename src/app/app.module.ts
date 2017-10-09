@@ -23,6 +23,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { BlogPageComponent } from './pages/blog-page/blog-page.component';
+import { BlogHomePageComponent } from './pages/blog-home-page/blog-home-page.component';
 
 // COMPONENTS
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -38,6 +39,7 @@ import { AddAPostComponent } from './components/add-a-post/add-a-post.component'
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { AuthUserComponent } from './components/auth-user/auth-user.component';
 import { AuthLogoutComponent } from './components/auth-logout/auth-logout.component';
+import { AddAPostIconComponent } from './components/add-a-post-icon/add-a-post-icon.component';
 
 // ROUTES
 const routes: Routes = [
@@ -48,6 +50,8 @@ const routes: Routes = [
   { path: 'profile/settings', component: SettingsPageComponent, canActivate: [ RequireAuthService ]},
   { path: 'profile', component: ProfilePageComponent },
   { path: 'profile/createpost', component: AddAPostComponent },
+  { path: 'profile/blogs', component: BlogPageComponent },
+  { path: 'profile/blogs/:id', component: BlogHomePageComponent },
 
   { path: 'user/:id', component:  ProfilePageComponent},
   { path: 'user/:id/blogs', component:  ProfilePageComponent},
@@ -67,6 +71,7 @@ const routes: Routes = [
     SettingsPageComponent,
     ProfilePageComponent,
     BlogPageComponent,
+    BlogHomePageComponent,
     NavbarComponent,
     SocialSigninComponent,
     ProfileSettingsComponent,
@@ -79,7 +84,8 @@ const routes: Routes = [
     AddAPostComponent,
     PlaygroundComponent,
     AuthUserComponent,
-    AuthLogoutComponent
+    AuthLogoutComponent,
+    AddAPostIconComponent
   ],
   imports: [
     BrowserModule,

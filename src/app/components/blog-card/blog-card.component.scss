@@ -1,0 +1,27 @@
+* {
+  margin-left: 0;
+}
+
+.blog-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 225px;
+  background-color: grey;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
+  border: .1px solid rgba(0,0,0,0.16);
+}
+
+.blog-card-heading {
+  background-color: white;
+  padding: 10px;
+}
+
+.blog-title {
+  display: inline;
+}
+
+.blog-number-posts {
+  float: right;
+  display: inline;
+  margin-right: 20px;
+}
