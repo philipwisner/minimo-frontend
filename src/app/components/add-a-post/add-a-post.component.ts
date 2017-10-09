@@ -14,6 +14,7 @@ const URL = baseUrl + '/posts';
 })
 export class AddAPostComponent implements OnInit {
   userData: Object;
+  posts: Object[];
 
   formData = {
     postTitle: '',
@@ -26,9 +27,12 @@ export class AddAPostComponent implements OnInit {
   }
 
   private handleCreatePostForm(myForm) {
-    this.postService.insertNew(this.formData).
-     subscribe();
-     this.router.navigate(['/profile']);
+    this.postService.insertNew(this.formData).subscribe();
+
+    this.postService.getPostList().subscribe((data) => {
+      this.posts = data;
+      this.router.navigate(['/profile']);
+     });
   }
 
 }

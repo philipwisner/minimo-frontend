@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
-import { CanActivate } from '@angular/router';
+import { Observable }  from 'rxjs/Rx';
+import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+
 
 @Injectable()
-export class RequireAuthService  implements CanActivate {
-  canActivate() {
-    return true;
+export class RequireAuthService implements CanActivate {
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    if (this.authService.getUser()) {
+      return true;
+    } else {
+      this.router.navigate(['auth/login']);
+      return false;
+    }
   }
+
 }

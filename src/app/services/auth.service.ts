@@ -5,7 +5,6 @@ import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
-
 import { environment } from '../../environments/environment';
 import { User } from '../models/user';
 
@@ -30,6 +29,15 @@ export class AuthService {
 
   getUser() : User {
     return this.user;
+  }
+
+  isLoggedIn() : boolean {
+    if (this.initialized) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 
   signup(user: User) {

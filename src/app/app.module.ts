@@ -45,7 +45,7 @@ const routes: Routes = [
   { path: 'home', component: WelcomePageComponent },
   { path: 'auth/login', component: LoginPageComponent },
   { path: 'auth/signup', component: SignupPageComponent },
-  { path: 'profile/settings', component: SettingsPageComponent },
+  { path: 'profile/settings', component: SettingsPageComponent, canActivate: [ RequireAuthService ]},
   { path: 'profile', component: ProfilePageComponent },
   { path: 'profile/createpost', component: AddAPostComponent },
 

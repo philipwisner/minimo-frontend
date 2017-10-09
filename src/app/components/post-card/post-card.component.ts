@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { PostService } from '../../services/posts.service';
 import { AuthService } from '../../services/auth.service';
 import { User } from '../../models/user';
@@ -10,13 +10,19 @@ import { DatePipe } from '@angular/common'
   templateUrl: './post-card.component.html',
   styleUrls: ['./post-card.component.scss']
 })
-export class PostCardComponent implements OnInit {
+export class PostCardComponent implements OnInit, OnChanges {
   posts: Object[];
 
   constructor(private postService: PostService, private authService: AuthService) { }
 
-
   ngOnInit() {
+    this.postService.getPostList()
+    .subscribe((data) => {
+      this.posts = data;
+    });
+  }
+
+  ngOnChanges() {
     this.postService.getPostList()
     .subscribe((data) => {
       this.posts = data;
