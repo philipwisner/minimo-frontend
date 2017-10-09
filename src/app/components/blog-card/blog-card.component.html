@@ -1,3 +1,8 @@
+<div *ngFor="let blog of blogs">
+  <h1>{{blog.blogName}}</h1>
+</div>
+
+<!-- 
 <a [routerLink]="['/profile/blogs/:id']" *ngFor="let blog of blogs">
   <div class="blog-card">
     <h1 class="blog-title"> {{blog.blogName}} </h1>
@@ -5,7 +10,7 @@
   </div>
 </a>
 
-<div *ngIf="!blog">
+<div *ngIf="!blogs">
   <p class="no-blogs">You have no blogs yet</p>
   <p class="no-blogs">Click on the button in the bottom right corner to write your first blog</p>
-</div>
+</div> -->

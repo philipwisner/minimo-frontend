@@ -6,6 +6,7 @@ import { Http, Response, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/catch';
 import { Blog } from '../models/blog';
 
+
 @Injectable()
 export class BlogService {
   new: any = {};
@@ -22,6 +23,7 @@ export class BlogService {
   }
 
   getBlogList(){
+    console.log("HELLOO")
     let options = new RequestOptions();
     options.withCredentials = true;
     return this.http.get('http://localhost:3000/blog/', options)

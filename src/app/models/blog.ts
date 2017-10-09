@@ -1,9 +1,9 @@
 export class Blog {
-  user_id: string;
-  blog_name: string;
-  blog_description: string;
+  userId: string;
+  blogName: string;
+  blogDescription: string;
   blog_image: string;
-  date: Date;
+  blogDate: Date;
   // color_theme: string;
 
   constructor() {
