@@ -29,10 +29,11 @@ export class AddABlogComponent implements OnInit {
 
   private handleCreateBlogForm(myForm) {
     this.blogService.insertNew(this.formData).subscribe();
+
     this.blogService.getBlogList().subscribe((data) => {
       this.blogs = data;
+      this.router.navigate(['/profile/blogs']);
      });
-     this.router.navigate(['/profile/blogs']);
-  }
+   }
 
-}
+  }
