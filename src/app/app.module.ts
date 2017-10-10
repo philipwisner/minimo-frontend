@@ -39,6 +39,7 @@ import { AuthUserComponent } from './components/auth-user/auth-user.component';
 import { AuthLogoutComponent } from './components/auth-logout/auth-logout.component';
 import { AddAPostIconComponent } from './components/add-a-post-icon/add-a-post-icon.component';
 import { AddABlogComponent } from './components/add-a-blog/add-a-blog.component';
+import { AddABlogIconComponent } from './components/add-a-blog-icon/add-a-blog-icon.component';
 
 // ROUTES
 const routes: Routes = [
@@ -83,7 +84,8 @@ const routes: Routes = [
     AuthUserComponent,
     AuthLogoutComponent,
     AddAPostIconComponent,
-    AddABlogComponent
+    AddABlogComponent,
+    AddABlogIconComponent
   ],
   imports: [
     BrowserModule,

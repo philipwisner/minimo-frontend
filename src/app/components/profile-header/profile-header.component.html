@@ -11,8 +11,7 @@
   <a [routerLink]="['/profile/blogs']"><button class="blogs" [ngClass]="{'active': hasInactive, 'inactive': hasActive}" (click)="toggleClass()">Blogs</button></a>
 </div>
 <select name="sortby" id="sortby">
-  <option value="" selected disabled hidden>Sort by</option>
-  <option value="newest">Newest</option>
+  <option value="" selected disabled>Sort by</option>
+  <option value="newest" selected>Newest</option>
   <option value="oldest">Oldest</option>
 </select>
-<button (click)="sortOldest()">Get Oldest</button>
