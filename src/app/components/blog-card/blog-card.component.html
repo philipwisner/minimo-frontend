@@ -1,16 +1,10 @@
-<div *ngFor="let blog of blogs">
-  <h1>{{blog.blogName}}</h1>
-</div>
-
-<!-- 
-<a [routerLink]="['/profile/blogs/:id']" *ngFor="let blog of blogs">
-  <div class="blog-card">
-    <h1 class="blog-title"> {{blog.blogName}} </h1>
-    <p class="blog-date"> {{ blog.blogDate | date:'d MMM y h:mm a'}} </p>
+  <div class="blog-card" *ngFor="let blog of blogs">
+    <div class="blog-card-heading">
+      <a [routerLink]="['/profile/blogs/', blog.id]"><h1 class="blog-title"> {{blog.blogName}} </h1></a>
+    </div>
   </div>
-</a>
 
 <div *ngIf="!blogs">
   <p class="no-blogs">You have no blogs yet</p>
   <p class="no-blogs">Click on the button in the bottom right corner to write your first blog</p>
-</div> -->
+</div>

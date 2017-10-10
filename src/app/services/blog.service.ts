@@ -7,6 +7,8 @@ import 'rxjs/add/operator/catch';
 import { Blog } from '../models/blog';
 
 
+const apiUrl = environment.apiUrl + '/blog/';
+
 @Injectable()
 export class BlogService {
   new: any = {};
@@ -27,6 +29,13 @@ export class BlogService {
     let options = new RequestOptions();
     options.withCredentials = true;
     return this.http.get('http://localhost:3000/blog/', options)
+      .map((res: Response) => res.json());
+  }
+
+  getBlog(id: string){
+    let options = new RequestOptions();
+    options.withCredentials = true;
+    return this.http.get(`http://localhost:3000/blog/${id}`, options)
       .map((res: Response) => res.json());
   }
 
