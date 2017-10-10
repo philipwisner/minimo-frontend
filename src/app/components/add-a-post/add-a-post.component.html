@@ -16,7 +16,7 @@
       <select name="blog" id="blog-name">
         <option value="" selected disabled hidden>Select Blog</option>
         <option value="newBlog">New Blog</option>
-        <option value="Blog2">Blog 2</option>
+        <option *ngFor="let blog of blogs" value="{{blog.blogName}}">{{blog.blogName}}</option>
       </select>
     </div>
   </form>
