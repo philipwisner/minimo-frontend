@@ -1,1 +1,1 @@
-button{cursor:pointer}
+*{box-sizing:border-box}form button{cursor:pointer;background-color:orange}.theme-red form #save-btn{background-color:red}

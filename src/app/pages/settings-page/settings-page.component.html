@@ -2,27 +2,29 @@
 <p class="welcome">hello,</p>
 <p class="username">{{user && user.name}}</p>
 
-<form novalidate>
-  <div>
-    <img src="../../../assets/pictures/profile.png" alt="profile picture">
-    <button id="upload-btn">Upload Picture</button>
-  </div>
-    <p id="add-desc">Add a description to your profile</p>
-      <input type="text" id="user-description" name="description" #myUserDescription=ngModel [(ngModel)]="editUser.description"/>
-    <p id="accent-select">Chose your accent color</p>
-    <div class="button-row">
-      <button id="yellow"></button>
-      <button id="orange"></button>
-      <button id="pink"></button>
-      <button id="red"></button>
-      <button id="skyblue"></button>
+<div *ngIf="editUser">
+  <form novalidate>
+    <div>
+      <img src="../../../assets/pictures/profile.png" alt="profile picture">
+      <button id="upload-btn">Upload Picture</button>
     </div>
-    <div class="button-row">
-      <button id="blue"></button>
-      <button id="purple"></button>
-      <button id="green"></button>
-      <button id="brown"></button>
-      <button id="black"></button>
-    </div>
-    <button id="save-btn" type="submit" (click)="updateUserInfo()">Save</button>
-</form>
+      <p id="add-desc">Add a description to your profile</p>
+        <input type="text" id="user-description" name="description" #myUserDescription=ngModel [(ngModel)]="editUser.description"  [disabled]="saving"/>
+      <p id="accent-select">Chose your accent color</p>
+      <div class="button-row">
+        <button id="yellow"></button>
+        <button id="orange"></button>
+        <button id="pink"></button>
+        <button id="red"></button>
+        <button id="skyblue"></button>
+      </div>
+      <div class="button-row">
+        <button id="blue"></button>
+        <button id="purple"></button>
+        <button id="green"></button>
+        <button id="brown"></button>
+        <button id="black"></button>
+      </div>
+      <button id="save-btn" type="submit" (click)="handleSubmit()" [disabled]="saving">Save</button>
+  </form>
+</div>

@@ -2,7 +2,7 @@
   <img src="../../../assets/pictures/profile.png" alt="profile picture">
   <div class="profile-text">
     <p class="username">{{user && user.name}}</p>
-    <p *ngIf="user.description" class=user-description>{{user && user.description}}</p>
+    <p *ngIf="user && user.description" class=user-description>{{user.description}}</p>
 
   </div>
 </div>

@@ -25,7 +25,6 @@ export class BlogService {
   }
 
   getBlogList(){
-    console.log("HELLOO")
     let options = new RequestOptions();
     options.withCredentials = true;
     return this.http.get('http://localhost:3000/blog/', options)

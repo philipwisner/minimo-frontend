@@ -10,13 +10,14 @@
       <button type="submit" id="submit-btn">Post</button>
     </div>
     <div>
-      <input type="checkbox" name="addtoblog" value="yes" #myCheckBox=ngModel [(ngModel)]="addToBlog">Add to Blog<br>
+      <label>
+      <input type="checkbox" name="addtoblog" #myCheckBox="ngModel" [(ngModel)]="addToBlog">Add to Blog</label>
     </div>
-    <div *ngIf="addToBlog.value === yes">
-      <select name="blog" id="blog-name">
+    <div *ngIf="addToBlog">
+      <select name="blog" id="blog-name" [(ngModel)]="formData.blogId">
         <option value="" selected disabled hidden>Select Blog</option>
         <option value="newBlog">New Blog</option>
-        <option *ngFor="let blog of blogs" value="{{blog.blogName}}">{{blog.blogName}}</option>
+        <option *ngFor="let blog of blogs" value="{{blog.id}}">{{blog.blogName}}</option>
       </select>
     </div>
   </form>

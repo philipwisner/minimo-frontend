@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { environment } from '../../../environments/environment';
 
@@ -20,13 +19,22 @@ export class SettingsPageComponent implements OnInit {
   user: User;
   editUser: User;
 
+  saving: boolean;
   subscriptions = [];
 
   constructor(private auth: AuthService, private router: Router) { }
 
-  ngOnInit() {
+  setUser(user) {
     this.user = this.auth.getUser();
-    let subscription = this.auth.userChange$.subscribe((user) => this.user = user);
+    if (this.user) {
+      this.editUser = new User(this.user);
+    }
+  }
+
+  ngOnInit() {
+    this.setUser(this.auth.getUser());
+    this.editUser = new User(this.user);
+    let subscription = this.auth.userChange$.subscribe((user) => this.setUser(user))
     this.subscriptions.push(subscription);
   }
 
@@ -34,9 +42,12 @@ export class SettingsPageComponent implements OnInit {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
-  updateUserInfo() {
-    this.auth.updateUser(this.editUser).subscribe();
-    this.editUser = new User(this.user);
+  handleSubmit() {
+    this.saving = true;
+    this.auth.updateUser(this.editUser).subscribe(() => {
+      this.saving = false;
+      this.router.navigate(['/profile']);
+    });
   }
 
 }
