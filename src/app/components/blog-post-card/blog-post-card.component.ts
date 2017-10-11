@@ -19,6 +19,7 @@ export class BlogPostCardComponent implements OnInit {
   blogId : string;
   user: User;
   subscriptions = [];
+  expanded = false;
 
   constructor(private postService: PostService,
               private authService: AuthService,
@@ -41,6 +42,10 @@ export class BlogPostCardComponent implements OnInit {
 
   ngOnDestroy() {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
+  }
+
+  handleExpandConent() {
+    this.expanded = !this.expanded;
   }
 
 }

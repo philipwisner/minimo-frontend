@@ -12,6 +12,8 @@ import { DatePipe } from '@angular/common'
 })
 export class PostCardComponent implements OnInit, OnChanges {
   posts: Object[];
+  showStyle: false;
+  expanded = false;
 
   constructor(private postService: PostService, private authService: AuthService) { }
 
@@ -27,6 +29,10 @@ export class PostCardComponent implements OnInit, OnChanges {
     .subscribe((data) => {
       this.posts = data;
     });
+  }
+
+  handleExpandConent() {
+    this.expanded = !this.expanded;
   }
 
 }

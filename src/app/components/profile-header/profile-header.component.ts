@@ -39,6 +39,8 @@ export class ProfileHeaderComponent implements OnInit, OnChanges {
   }
 
   toggleClass() {
+    console.log(this.hasInactive);
+    console.log(this.hasActive)
     this.hasInactive = true;
     this.hasActive = false;
     //need to toggle adding and removing the class active & inactive

@@ -15,6 +15,7 @@ import { AuthService } from './services/auth.service';
 import { PostService } from './services/posts.service';
 import { BlogService } from './services/blog.service';
 import { RequireAuthService } from './guards/require-auth.service';
+import { FileSelectDirective } from "ng2-file-upload"
 
 // PAGES
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
@@ -55,6 +56,7 @@ const routes: Routes = [
   { path: 'profile/createblog', component: AddABlogComponent },
   { path: 'profile/blogs', component: BlogPageComponent },
   { path: 'profile/blogs/:id', component: BlogHomePageComponent },
+  // { path: 'profile/settgins/picture', component:  },
 
   // PATHS TO DO
   { path: 'profile/blogs/:id/posts', component: BlogHomePageComponent },
@@ -93,7 +95,8 @@ const routes: Routes = [
     AddABlogComponent,
     AddABlogIconComponent,
     BlogPostListComponent,
-    BlogPostCardComponent
+    BlogPostCardComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,

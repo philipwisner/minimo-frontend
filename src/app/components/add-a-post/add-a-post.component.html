@@ -9,10 +9,12 @@
     <div class="field" *ngIf="!myPostTitle.errors && !myPostBody.errors">
       <button type="submit" id="submit-btn">Post</button>
     </div>
-    <div>
-      <label>
-      <input type="checkbox" name="addtoblog" #myCheckBox="ngModel" [(ngModel)]="addToBlog">Add to Blog</label>
-    </div>
+
+    <div class="container">
+      <input type="checkbox" name="addtoblog" id="checkbox" #myCheckBox="ngModel" [(ngModel)]="addToBlog">
+      <label for="checkbox"><span class="checkbox">Add to Blog</span></label>
+	  </div>
+
     <div *ngIf="addToBlog">
       <select name="blog" id="blog-name" [(ngModel)]="formData.blogId">
         <option value="" selected disabled hidden>Select Blog</option>

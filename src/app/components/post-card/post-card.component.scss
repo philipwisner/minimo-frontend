@@ -26,6 +26,18 @@ h1 {
 .post-content {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 10px 0 15px 0;
+  max-height: 145px;
+  overflow: hidden;
+  word-wrap: break-word;
+  @include responsive-font-size (.65em, 1.2em, 375px, 1200px, 0.5em);
+}
+
+.expand {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 10px 0 15px 0;
+  max-height: 100%;
+  transition: all 200ms ease;
+  word-wrap: break-word;
   @include responsive-font-size (.65em, 1.2em, 375px, 1200px, 0.5em);
 }
 

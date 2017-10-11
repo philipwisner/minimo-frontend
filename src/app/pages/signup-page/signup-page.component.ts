@@ -26,7 +26,7 @@ export class SignupPageComponent implements OnInit {
     this.auth.signup(this.user).subscribe(
       (user) => {
       	if(user.email){
-      		this.user = user,
+      		this.user = user;
       		this.router.navigate(['/profile/settings']);
       	} else {this.message}
       },
