@@ -1,9 +1,8 @@
 <div class="profile-info">
-  <img src="../../../assets/pictures/profile.png" alt="profile picture">
+  <img src="{{apiUrl+user.profilePhoto}}" alt="profile picture" *ngIf="user && user.profilePhoto">
   <div class="profile-text">
     <p class="username">{{user && user.name}}</p>
     <p *ngIf="user && user.description" class=user-description>{{user.description}}</p>
-
   </div>
 </div>
 <div class="button-row">

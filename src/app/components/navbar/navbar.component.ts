@@ -1,7 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy, Input } from '@angular/core';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { PostService } from '../../services/posts.service';
+import { environment } from '../../../environments/environment';
+
+const URL = environment.apiUrl + '/auth/upload';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +13,8 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+@Input() userId;
+  apiUrl = environment.apiUrl;
   showStyle = false;
   user: User;
   subscriptions = [];
@@ -26,7 +32,6 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-
   getStyle() {
     if(this.showStyle) {
       return "";
@@ -38,5 +43,4 @@ export class NavbarComponent implements OnInit {
   ngOnDestroy() {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
-
 }

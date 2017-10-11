@@ -1,5 +1,6 @@
 <header>
-  <img src="../../../assets/pictures/profile.png" alt="profile picture" class="profile-pic" (click)="showStyle = !showStyle;">
+  <!-- <img src="../../../assets/pictures/profile.png" alt="profile picture" class="profile-pic" (click)="showStyle = !showStyle;"> -->
+  <img src="{{apiUrl+user.profilePhoto}}" alt="profile picture" *ngIf="user && user.profilePhoto" class="profile-pic" (click)="showStyle = !showStyle;">
   <p class="minimo-header" *ngIf="!user"><a [routerLink]="['/home']">minimo</a></p>
   <p class="minimo-header" *ngIf="user"><a [routerLink]="['/profile']">minimo</a></p>
   <img src="../../../assets/pictures/minimo-m.svg" alt="logo" class="logo-m">

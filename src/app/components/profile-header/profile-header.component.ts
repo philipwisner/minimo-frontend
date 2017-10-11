@@ -1,8 +1,11 @@
-import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy, Input } from '@angular/core';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { PostService } from '../../services/posts.service';
+import { environment } from '../../../environments/environment';
+
+const URL = environment.apiUrl + '/auth/upload';
 
 @Component({
   selector: 'app-profile-header',
@@ -10,6 +13,8 @@ import { PostService } from '../../services/posts.service';
   styleUrls: ['./profile-header.component.scss']
 })
 export class ProfileHeaderComponent implements OnInit, OnChanges {
+@Input() userId;
+  apiUrl = environment.apiUrl;
   user: User;
   subscriptions = [];
   hasInactive = false;
@@ -45,7 +50,4 @@ export class ProfileHeaderComponent implements OnInit, OnChanges {
     this.hasActive = false;
     //need to toggle adding and removing the class active & inactive
     }
-
-
-
   }

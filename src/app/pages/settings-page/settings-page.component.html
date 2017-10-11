@@ -5,8 +5,7 @@
 <div *ngIf="editUser">
   <form (ngSubmit)="handleUpdateUserForm(myForm)" #myUserForm="ngForm" novalidate>
     <div *ngIf="user">
-      <p>{{apiUrl + user.profilePhoto}}</p>
-      <img src="{{apiUrl + user.profilePhoto}}"  alt="profile picture">
+      <img src="{{apiUrl+user.profilePhoto}}"  alt="profile picture">
       <input type="file" name="file" ng2FileSelect [uploader]="uploader" [disabled]="saving" />
       <!-- <button id="upload-btn">Upload Picture</button> -->
     </div>
