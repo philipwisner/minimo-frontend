@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  showStyle: false;
+  showStyle = false;
   user: User;
   subscriptions = [];
   constructor(private auth: AuthService, private router: Router) { }

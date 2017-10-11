@@ -6,6 +6,7 @@ import { Http, Response, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/catch';
 import { Post } from '../models/post';
 
+const apiUrl = environment.apiUrl + '/posts/';
 
 @Injectable()
 export class PostService {
@@ -25,14 +26,14 @@ export class PostService {
   getPostList() {
     let options = new RequestOptions();
     options.withCredentials = true;
-    return this.http.get('http://localhost:3000/posts/', options)
+    return this.http.get(apiUrl, options)
       .map((res: Response) => res.json());
   }
 
   getPostListbyBlog(id: string) {
     let options = new RequestOptions();
     options.withCredentials = true;
-    return this.http.get(`http://localhost:3000/posts/blog/${id}`, options)
+    return this.http.get(apiUrl + `blog/${id}`, options)
       .map((res: Response) => res.json());
   }
 
@@ -40,14 +41,14 @@ export class PostService {
     console.log("oldest service called");
     let options = new RequestOptions();
     options.withCredentials = true;
-    return this.http.get('http://localhost:3000/posts/oldest/', options)
+    return this.http.get(apiUrl + 'oldest', options)
       .map((res: Response) => res.json());
   }
 
   insertNew(post) {
     let options = new RequestOptions();
     options.withCredentials = true;
-    return this.http.post('http://localhost:3000/posts', post, options)
+    return this.http.post(apiUrl, post, options)
     .map((res: Response) => {
        return res.json()
     })

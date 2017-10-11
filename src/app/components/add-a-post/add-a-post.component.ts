@@ -16,7 +16,8 @@ const URL = baseUrl + '/posts';
 export class AddAPostComponent implements OnInit {
   userData: Object;
   posts: Object[];
-  blogs: Object[];;
+  blogs: Object[];
+  addToBlog: boolean;
 
   formData = {
     postTitle: '',
@@ -38,7 +39,7 @@ export class AddAPostComponent implements OnInit {
     });
   }
 
-  private handleCreatePostForm(myForm) {
+  handleCreatePostForm(myForm) {
     this.postService.insertNew(this.formData).subscribe(() => {
       this.router.navigate(['/profile']);
      });

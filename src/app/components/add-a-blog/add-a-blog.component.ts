@@ -27,7 +27,7 @@ export class AddABlogComponent implements OnInit {
   ngOnInit() {
   }
 
-  private handleCreateBlogForm(myForm) {
+  handleCreateBlogForm(myForm) {
     this.blogService.insertNew(this.formData).subscribe();
 
     this.blogService.getBlogList().subscribe((data) => {

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { FileUploadModule } from 'ng2-file-upload';
 
 // MAIN APP
 import { AppComponent } from './app.component';
@@ -15,7 +16,8 @@ import { AuthService } from './services/auth.service';
 import { PostService } from './services/posts.service';
 import { BlogService } from './services/blog.service';
 import { RequireAuthService } from './guards/require-auth.service';
-import { FileSelectDirective } from "ng2-file-upload"
+
+
 
 // PAGES
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
@@ -36,7 +38,6 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogHeaderComponent } from './components/blog-header/blog-header.component';
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
-import { AuthUserComponent } from './components/auth-user/auth-user.component';
 import { AuthLogoutComponent } from './components/auth-logout/auth-logout.component';
 import { AddAPostIconComponent } from './components/add-a-post-icon/add-a-post-icon.component';
 import { AddABlogComponent } from './components/add-a-blog/add-a-blog.component';
@@ -89,20 +90,19 @@ const routes: Routes = [
     BlogCardComponent,
     BlogHeaderComponent,
     AddAPostComponent,
-    AuthUserComponent,
     AuthLogoutComponent,
     AddAPostIconComponent,
     AddABlogComponent,
     AddABlogIconComponent,
     BlogPostListComponent,
     BlogPostCardComponent,
-    FileSelectDirective
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule
   ],
   providers: [AuthService, RequireAuthService, PostService, BlogService],
   bootstrap: [AppComponent]

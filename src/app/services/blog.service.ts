@@ -27,21 +27,21 @@ export class BlogService {
   getBlogList(){
     let options = new RequestOptions();
     options.withCredentials = true;
-    return this.http.get('http://localhost:3000/blog/', options)
+    return this.http.get(apiUrl, options)
       .map((res: Response) => res.json());
   }
 
   getBlog(id: string){
     let options = new RequestOptions();
     options.withCredentials = true;
-    return this.http.get(`http://localhost:3000/blog/${id}`, options)
+    return this.http.get(apiUrl + `${id}`, options)
       .map((res: Response) => res.json());
   }
 
   insertNew(blog) {
     let options = new RequestOptions();
     options.withCredentials = true;
-    return this.http.post('http://localhost:3000/blog', blog, options)
+    return this.http.post(apiUrl, blog, options)
     .map((res: Response) => {
        return res.json()
     })
