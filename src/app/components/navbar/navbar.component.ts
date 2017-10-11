@@ -21,8 +21,11 @@ export class NavbarComponent implements OnInit {
   }
 
   logout() {
-    this.auth.logout().subscribe();
+    this.auth.logout().subscribe(() => {
+      this.router.navigate(['/home']);
+    });
   }
+
 
   getStyle() {
     if(this.showStyle) {

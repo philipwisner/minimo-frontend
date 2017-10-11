@@ -1,0 +1,8 @@
+@import "../../../responsive-font-size";
+
+.no-blogs {
+  padding: 0 20px;
+  text-align: center;
+  margin-bottom: 5vh;
+  @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
+}

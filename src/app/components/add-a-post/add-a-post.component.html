@@ -16,7 +16,7 @@
     <div *ngIf="addToBlog">
       <select name="blog" id="blog-name" [(ngModel)]="formData.blogId">
         <option value="" selected disabled hidden>Select Blog</option>
-        <option value="newBlog">New Blog</option>
+        <!-- <option value="newBlog">New Blog</option> -->
         <option *ngFor="let blog of blogs" value="{{blog.id}}">{{blog.blogName}}</option>
       </select>
     </div>
