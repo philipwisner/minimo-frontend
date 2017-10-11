@@ -29,6 +29,13 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+  getPostListbyBlog(id: string) {
+    let options = new RequestOptions();
+    options.withCredentials = true;
+    return this.http.get(`http://localhost:3000/posts/blog/${id}`, options)
+      .map((res: Response) => res.json());
+  }
+
   getPostListOldest() {
     console.log("oldest service called");
     let options = new RequestOptions();

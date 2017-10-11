@@ -40,6 +40,8 @@ import { AuthLogoutComponent } from './components/auth-logout/auth-logout.compon
 import { AddAPostIconComponent } from './components/add-a-post-icon/add-a-post-icon.component';
 import { AddABlogComponent } from './components/add-a-blog/add-a-blog.component';
 import { AddABlogIconComponent } from './components/add-a-blog-icon/add-a-blog-icon.component';
+import { BlogPostListComponent } from './components/blog-post-list/blog-post-list.component';
+import { BlogPostCardComponent } from './components/blog-post-card/blog-post-card.component';
 
 // ROUTES
 const routes: Routes = [
@@ -54,9 +56,13 @@ const routes: Routes = [
   { path: 'profile/blogs', component: BlogPageComponent },
   { path: 'profile/blogs/:id', component: BlogHomePageComponent },
 
+  // PATHS TO DO
+  { path: 'profile/blogs/:id/posts', component: BlogHomePageComponent },
+
   { path: 'user/:id', component:  ProfilePageComponent},
   { path: 'user/:id/blogs', component:  ProfilePageComponent},
   { path: 'user/:id/blogs/:id', component:  BlogPageComponent},
+
   { path: 'profile/:id', component: ProfilePageComponent },
   { path: 'profile/:id/blogs', component: ProfilePageComponent },
   { path: 'profile/:id/blogs/:id', component: BlogPageComponent },
@@ -85,7 +91,9 @@ const routes: Routes = [
     AuthLogoutComponent,
     AddAPostIconComponent,
     AddABlogComponent,
-    AddABlogIconComponent
+    AddABlogIconComponent,
+    BlogPostListComponent,
+    BlogPostCardComponent
   ],
   imports: [
     BrowserModule,

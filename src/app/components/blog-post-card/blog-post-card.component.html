@@ -1,0 +1,11 @@
+<div *ngFor="let post of posts" class="post-card">
+  <h1> {{post.postTitle}} </h1>
+  <p class="post-date"> {{ post.postDate | date:'d MMM y h:mm a'}} </p>
+  <p class="post-content"> {{post.postContent}} </p>
+  <button>Read More</button>
+</div>
+
+<div *ngIf="!posts">
+  <p class="no-posts">You have no posts yet</p>
+  <p class="no-posts">Click on the button in the bottom right corner to write your first post</p>
+</div>
