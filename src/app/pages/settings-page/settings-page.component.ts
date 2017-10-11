@@ -54,25 +54,27 @@ export class SettingsPageComponent implements OnInit {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
-
-  uploadPhoto() {
-    const files = this.uploader.getNotUploadedItems();
-    if (files.length) {
-      this.uploader.uploadAll();
-      this.uploader.onCompleteItem = (item, response) => {
-        let data = JSON.parse(response);
-        this.editUser.profilePhoto = data.userFileName;
-      };
+  private submit() {
+      this.saving = true;
+      this.auth.updateUser(this.editUser).subscribe(() => {
+        this.saving = false;
+        this.router.navigate(['/profile']);
+      });
     }
-  }
 
-  handleSubmit() {
-    this.saving = true;
-    this.uploadPhoto();
-    this.auth.updateUser(this.editUser).subscribe(() => {
-      this.saving = false;
-      this.router.navigate(['/profile']);
-    });
-  }
+    handleUpdateUserForm(myForm) {
+      const files = this.uploader.getNotUploadedItems();
+      if (files.length) {
+        this.uploader.uploadAll();
+        this.uploader.onCompleteItem = (item, response) => {
+          let data = JSON.parse(response);
+          this.editUser.profilePhoto = data.userFileName;
+          this.submit();
+        };
+      }
+      else {
+        this.submit();
+      }
+    }
 
 }

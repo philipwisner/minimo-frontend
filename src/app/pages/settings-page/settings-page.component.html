@@ -3,9 +3,10 @@
 <p class="username">{{user && user.name}}</p>
 
 <div *ngIf="editUser">
-  <form novalidate>
-    <div>
-      <img src="../../../assets/pictures/profile.png" alt="profile picture">
+  <form (ngSubmit)="handleUpdateUserForm(myForm)" #myUserForm="ngForm" novalidate>
+    <div *ngIf="user">
+      <p>{{apiUrl + user.profilePhoto}}</p>
+      <img src="{{apiUrl + user.profilePhoto}}"  alt="profile picture">
       <input type="file" name="file" ng2FileSelect [uploader]="uploader" [disabled]="saving" />
       <!-- <button id="upload-btn">Upload Picture</button> -->
     </div>
@@ -26,6 +27,6 @@
         <button id="brown"></button>
         <button id="black"></button>
       </div>
-      <button id="save-btn" type="submit" (click)="handleSubmit()" [disabled]="saving">Save</button>
+      <button id="save-btn" type="submit" [disabled]="saving">Save</button>
   </form>
 </div>
