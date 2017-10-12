@@ -58,7 +58,7 @@ export class SettingsPageComponent implements OnInit {
       this.saving = true;
       this.auth.updateUser(this.editUser).subscribe(() => {
         this.saving = false;
-        this.router.navigate(['/profile']);
+        this.router.navigate(['/profile/posts']);
       });
     }
 
