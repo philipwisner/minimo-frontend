@@ -1,9 +1,13 @@
 <app-navbar></app-navbar>
-<h1 class="heading">What other's are saying</h1>
-<div *ngFor="let post of posts" class="post-card">
-  <h1> {{post.postTitle}} </h1>
-  <p class="post-date"> {{ post.postDate | date:'d MMM y h:mm a'}} </p>
-  <a [routerLink]="['/profile/', userId]"><p class="post-author"> {{ post.userId }} </p></a>
-  <p class="post-content" [ngClass]="{'expand': expanded}"> {{post.postContent}} </p>
-  <button (click)="handleExpandConent()">Read More</button>
+<div class="feed">
+  <div class="feed-heading">
+    <h1 class="heading">What other's are saying</h1>
+  </div>
+  <div *ngFor="let post of posts" class="post-card">
+    <h1> {{post.postTitle}} </h1>
+    <p class="post-date"> {{ post.postDate | date:'d MMM y h:mm a'}} </p>
+    <a [routerLink]="['/profile/', userId]"><p class="post-author"> {{ post.userId }} </p></a>
+    <p class="post-content" [ngClass]="{'expand': expanded}"> {{post.postContent}} </p>
+    <button (click)="handleExpandConent()">Read More</button>
+  </div>
 </div>

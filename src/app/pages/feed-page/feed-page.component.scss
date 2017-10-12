@@ -1,5 +1,5 @@
 @import "../../../responsive-font-size";
-
+@import "../../../variables";
 
 button {
   margin: 0 auto;
@@ -11,18 +11,30 @@ button {
   padding: 5px 20px;
 }
 
-h1 {
-  font-family: 'Heebo', sans-serif;
-  margin: 0 auto;
-  @include responsive-font-size (1.7em, 2em, 375px, 1200px, 0.5em);
+.feed-heading {
+  min-height: 25vh;
+  margin-top: 0;
+  background-color: black;
+  h1 {
+    margin: 0;
+    padding-top: 10vh;
+    font-family: $body-font;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    @include responsive-font-size (1.5em, 1.7em, 375px, 1200px, 0.5em);
+  }
+  img {
+    max-width: 50px;
+    background-color: white;
+    text-align: center;
+  }
 }
 
-.heading {
-  font-family: 'Heebo', sans-serif;
-  text-align: center;
-  margin: 3vh 0;
-  color: grey;
-  @include responsive-font-size (1.5em, 1.7em, 375px, 1200px, 0.5em);
+h1 {
+  font-family: $heading-font;
+  margin: 0 auto;
+  @include responsive-font-size (1.7em, 2em, 375px, 1200px, 0.5em);
 }
 
 .post-date {
