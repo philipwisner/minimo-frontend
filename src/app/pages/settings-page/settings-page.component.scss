@@ -1,4 +1,5 @@
 @import "../../../responsive-font-size";
+@import "../../../variables";
 
 * {
   text-align: center;
@@ -7,61 +8,80 @@
 .welcome {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   font-weight: 300;
-	@include responsive-font-size (2em, 4em, 375px, 1200px, 0.5em);
+	@include responsive-font-size (1.7em, 3em, 375px, 1200px, 0.5em);
 }
 
 .username {
-  @include responsive-font-size (2.6em, 5.5em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (2em, 4em, 375px, 1200px, 0.5em);
   margin-top: 0;
-  margin-bottom: 3vh;
-  font-family: 'Heebo', sans-serif;
+  margin-bottom: 2vh;
+  font-family: $heading-font;
   font-weight: 500;
 }
 
-input {
-  border: none;
-  border-bottom: .8px solid black;
-  min-width: 250px;
-  margin-bottom: 0;
-}
+
 
 form p {
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  max-width: 80px;
+.profile-photo-upload {
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 20px;
+    max-width: 90px;
+    border-radius: 100px;
+    border: .5px solid grey;
+  }
+}
+
+#file-upload {
+  display: none;
+}
+
+.custom-file-upload, .profile-container button {
+  width: 150px;
+  display: inline-block;
+  font-family: $body-font;
+  text-align: center;
+  background-color: #eeeeee;
+  color: grey;
   border-radius: 100px;
-  border: .5px solid grey;
+  padding: 5px 0;
+  @include responsive-font-size(.6em, 1.2em, 375px, 1200px, 0.5em);
+}
+
+.custom-file-upload:hover, .profile-container button:hover {
+  cursor: pointer;
 }
 
 #add-desc {
   margin-top: 5vh;
-  margin-bottom: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  margin-bottom: 2vh;
+  font-family: $body-font;
   font-weight: 600;
-  @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (1.1em, 2em, 375px, 1200px, 0.5em);
+}
+
+#user-description {
+  font-family: $body-font;
+  @include responsive-font-size (.7em, 2em, 375px, 1200px, 0.5em);
+  border: none;
+  border-bottom: .8px solid black;
+  min-width: 280px;
+  margin-bottom: 0;
 }
 
 #accent-select {
   margin-top: 5vh;
   margin-bottom: 3vh;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   font-weight: 600;
-  @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
-}
-
-#upload-btn {
-  border: none;
-  border-radius: 100px;
-  color: #505050;
-  background-color: #e2e2e2;
-  padding: 5px 20px;
+  @include responsive-font-size (1.1em, 2em, 375px, 1200px, 0.5em);
 }
 
 .button-row {
@@ -151,15 +171,15 @@ img {
 
 #save-btn {
   @include responsive-font-size (1.2em, 1.7em, 375px, 1200px, 0.5em);
-  font-family: 'Heebo', sans-serif;
+  font-family: $body-font;
   background-color: black;
   color: white;
   text-transform: lowercase;
   border: none;
   border-radius: 100px;
-  padding: 5px 15px;
+  padding: 3px 15px 5px 15px;
   text-align: center;
-  width: 200px;
+  width: 180px;
   margin-top: 5vh;
   margin-bottom: 3vh;
 }
