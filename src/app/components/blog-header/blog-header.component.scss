@@ -1,17 +1,26 @@
+@import "../../../responsive-font-size";
+@import "../../../variables";
+
 .blog-header {
   background-color: black;
   color: white;
   height: 25vh;
   text-align: center;
-  margin: 0;
+  padding-top: 3vh;
+  margin-bottom: 10px;
 }
 
 .blog-name {
   margin-top: 5px;
+  font-family: $heading-font;
   margin-bottom: 0;
   padding-top: 20px;
+  text-transform: uppercase;
+  @include responsive-font-size (1.7em, 2.2em, 375px, 1200px, 0.5em);
 }
 
 .blog-description {
   margin-top: 10px;
+  font-family: $body-font;
+  @include responsive-font-size (.8em, 2em, 375px, 1200px, 0.5em);
 }

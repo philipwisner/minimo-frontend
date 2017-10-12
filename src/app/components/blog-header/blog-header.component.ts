@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
-import { PostService } from '../../services/posts.service';
 import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../models/user';
@@ -20,7 +19,6 @@ export class BlogHeaderComponent implements OnInit {
   constructor(private blogService: BlogService,
               private authService: AuthService,
               private ActivatedRoute: ActivatedRoute,
-              private postService: PostService
              ) { }
 
   ngOnInit() {
