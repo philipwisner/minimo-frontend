@@ -3,16 +3,21 @@
 }
 
 @import 'responsive-font-size';
+@import 'variables';
 
 
-form
-button {
-  cursor: pointer;
-  background-color: orange;
-}
 
-.theme-red {
-  form #save-btn {
-    background-color: red;
-  }
-}
+// Testing for color theme functionality
+// Have to make theme-red more specific selection than existing!
+
+// form
+// button {
+//   cursor: pointer;
+//   background-color: orange;
+// }
+//
+// .theme-red {
+//   form #save-btn {
+//     background-color: red;
+//   }
+// }

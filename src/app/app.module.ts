@@ -56,20 +56,15 @@ const routes: Routes = [
   { path: 'profile/blogs', component: BlogPageComponent },
   { path: 'profile/createpost', component: AddAPostComponent },
   { path: 'profile/createblog', component: AddABlogComponent },
-  { path: 'profile/:id', component: ProfilePageComponent },
   { path: 'profile/blogs/:id', component: BlogHomePageComponent },
-  // { path: 'profile/settgins/picture', component:  },
+
+  //WORKING ON
+  { path: 'profile/:id', component: ProfilePageComponent },
 
   // PATHS TO DO
-  { path: 'profile/blogs/:id/posts', component: BlogHomePageComponent },
-
-  { path: 'user/:id', component:  ProfilePageComponent},
-  { path: 'user/:id/blogs', component:  ProfilePageComponent},
-  { path: 'user/:id/blogs/:id', component:  BlogPageComponent},
-
-  { path: 'profile/:id', component: ProfilePageComponent },
   { path: 'profile/:id/blogs', component: ProfilePageComponent },
   { path: 'profile/:id/blogs/:id', component: BlogPageComponent },
+  { path: 'profile/:id/blogs/:id/posts', component: BlogHomePageComponent },
 ];
 
 @NgModule({

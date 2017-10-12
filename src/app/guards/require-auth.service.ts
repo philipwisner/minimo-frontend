@@ -10,7 +10,7 @@ export class RequireAuthService implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    if (this.authService) {
+    if (this.authService.me()) {
       return true;
     } else {
       this.router.navigate(['auth/login']);

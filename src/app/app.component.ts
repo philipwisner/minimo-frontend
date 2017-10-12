@@ -11,7 +11,6 @@ import { User } from './models/user';
 })
 
 export class AppComponent implements OnInit {
-
   user: User;
 
   constructor(private session: AuthService) { }

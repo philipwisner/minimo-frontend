@@ -1,12 +1,12 @@
 @import "../../../responsive-font-size";
+@import "../../../variables";
 
 * {
   text-align: center;
 }
 
 h1 {
-  font-family: 'Heebo', sans-serif;
-  font-weight: 500;
+  font-family: $heading-font;
   margin-top: 6vh;
   margin-bottom: 8vh;
 	@include responsive-font-size (4em, 6em, 375px, 1200px, 0.5em);
@@ -15,37 +15,43 @@ h1 {
   }
 }
 
-// .mi {
-//   font-weight: 400;
-// }
-//
+.mi {
+  font-weight: 600;
+}
+
 .ni {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .mo {
-  font-weight: 100;
+  font-weight: 200;
 }
+
 
 .error {
   color: grey;
+  font-family: $body-font;
 }
 
 input {
   border: none;
   border-bottom: .8px solid black;
+  font-family: $body-font;
   min-width: 250px;
   margin-bottom: 0;
   @include responsive-font-size (.8em, 1.5em, 375px, 1200px, 0.5em);
 }
 
+
 form p {
   margin-top: 5px;
+  font-family: $body-font;
 }
 
 
 button {
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
+  font-family: $body-font;
   background-color: black;
   color: white;
   text-transform: lowercase;
@@ -59,7 +65,7 @@ button {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-//Inverse button color
+// // Inverse button color
 // button {
 //   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
 //   background-color: white;
@@ -78,6 +84,7 @@ button {
 
 .existing-user {
   margin-top: 5vh;
+  font-family: $body-font;
 }
 
 a {

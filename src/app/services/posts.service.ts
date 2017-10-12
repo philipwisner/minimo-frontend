@@ -6,6 +6,8 @@ import { Http, Response, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/catch';
 import { Post } from '../models/post';
 
+
+//LINK IN THE BACKEND TO FIND DATA
 const apiUrl = environment.apiUrl + '/posts/';
 
 @Injectable()
@@ -23,6 +25,7 @@ export class PostService {
     this.postChange.subscribe();
   }
 
+// LIST OF ALL POSTS (GLOBAL)
   getPostList() {
     let options = new RequestOptions();
     options.withCredentials = true;
@@ -30,6 +33,7 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+// LIST OF ALL POSTS (LOGGEN IN)
   getYourPostList() {
     let options = new RequestOptions();
     options.withCredentials = true;
@@ -37,6 +41,7 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+  // LIST OF ALL POSTS OF A USER (PASS USER ID)
   getPostListbyUser(id: string) {
     let options = new RequestOptions();
     options.withCredentials = true;
@@ -44,6 +49,7 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+  // LIST OF ALL POSTS THAT BELONG TO SELECTED BLOG (PASS BLOG ID)
   getPostListbyBlog(id: string) {
     let options = new RequestOptions();
     options.withCredentials = true;
@@ -51,6 +57,7 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+  // LIST OF ALL POSTS OF A USER IN REVERSE ORDER) -- NOT WORKING!!
   getPostListOldest() {
     console.log("oldest service called");
     let options = new RequestOptions();
@@ -59,6 +66,7 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+  // CREATE A NEW POST
   insertNew(post) {
     let options = new RequestOptions();
     options.withCredentials = true;

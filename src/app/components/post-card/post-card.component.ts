@@ -10,7 +10,7 @@ import { DatePipe } from '@angular/common'
   templateUrl: './post-card.component.html',
   styleUrls: ['./post-card.component.scss']
 })
-export class PostCardComponent implements OnInit, OnChanges {
+export class PostCardComponent implements OnInit {
   posts: Object[];
   showStyle: false;
   expanded = false;
@@ -19,13 +19,6 @@ export class PostCardComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.postService.getYourPostList()
-    .subscribe((data) => {
-      this.posts = data;
-    });
-  }
-
-  ngOnChanges() {
-    this.postService.getPostList()
     .subscribe((data) => {
       this.posts = data;
     });

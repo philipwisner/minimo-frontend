@@ -6,7 +6,7 @@ import { Http, Response, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/catch';
 import { Blog } from '../models/blog';
 
-
+//LINK IN THE BACKEND TO FIND DATA
 const apiUrl = environment.apiUrl + '/blog/';
 
 @Injectable()
@@ -24,6 +24,7 @@ export class BlogService {
     this.blogChange.subscribe();
   }
 
+//GET A LIST OF ALL BLOGS BELONGING TO LOGGED IN USER
   getBlogList(){
     let options = new RequestOptions();
     options.withCredentials = true;
@@ -31,6 +32,7 @@ export class BlogService {
       .map((res: Response) => res.json());
   }
 
+  //GET THE DETAILS OF SELECTED BLOG
   getBlog(id: string){
     let options = new RequestOptions();
     options.withCredentials = true;
@@ -38,6 +40,7 @@ export class BlogService {
       .map((res: Response) => res.json());
   }
 
+  //CREATE NEW BLOG
   insertNew(blog) {
     let options = new RequestOptions();
     options.withCredentials = true;

@@ -4,10 +4,10 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-
 import { environment } from '../../environments/environment';
 import { User } from '../models/user';
 
+//LINK IN THE BACKEND TO FIND DATA
 const apiUrl = environment.apiUrl + '/auth';
 
 @Injectable()
@@ -27,17 +27,9 @@ export class AuthService {
     this.userChange.next(user);
   }
 
+// GET LOGGED IN USER
   getUser() : User {
     return this.user;
-  }
-
-  isLoggedIn() : boolean {
-    if (this.initialized) {
-      return true;
-    }
-    else {
-      return false;
-    }
   }
 
   signup(user: User) {
@@ -72,6 +64,7 @@ export class AuthService {
     });
   }
 
+//CHECK IF LOGGED IN
   me() {
     let options = new RequestOptions();
     options.withCredentials = true;
@@ -87,6 +80,7 @@ export class AuthService {
       });
   }
 
+//INITIALIZE SESSION
   initialize() {
     if (!this.initialized) {
       this.initialized = true;
@@ -94,6 +88,8 @@ export class AuthService {
     }
   }
 
+
+//EDIT USER INFO (PIC & DESCRIPTION)
   updateUser(user: User){
     let options = new RequestOptions();
     options.withCredentials = true;

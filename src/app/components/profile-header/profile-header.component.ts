@@ -35,7 +35,6 @@ export class ProfileHeaderComponent implements OnInit, OnChanges {
   }
 
   sortOldest() {
-    console.log('oldest clicked');
     this.postService.getPostListOldest()
   }
 

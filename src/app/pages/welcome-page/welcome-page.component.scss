@@ -1,31 +1,33 @@
 @import "../../../responsive-font-size";
+@import "../../../variables";
 
 h1 {
   text-align: center;
   margin-bottom: 10vh;
   margin-top: 14vh;
-  font-family: 'Heebo', sans-serif;
-  font-weight: 500;
+  font-family: $heading-font;
 	@include responsive-font-size (4em, 6em, 375px, 1200px, 0.5em);
 }
 
-// .mi {
-//   font-weight: 400;
-// }
-//
+
+.mi {
+  font-weight: 600;
+}
+
 .ni {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .mo {
-  font-weight: 100;
+  font-weight: 200;
 }
+
 
 h3 {
   text-align: center;
   margin-bottom: 20vh;
-  font-weight: lighter;
-  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-family: $body-font;
   padding: 0 15px;
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
 }
@@ -43,7 +45,7 @@ a {
 button {
   @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
   background-color: black;
-  font-family: 'Heebo', sans-serif;
+  font-family: $body-font;
   color: white;
   text-transform: lowercase;
   border: none;
