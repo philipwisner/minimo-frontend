@@ -11,8 +11,8 @@
     </div>
 
     <div class="container">
-      <input type="checkbox" name="addtoblog" id="checkbox" #myCheckBox="ngModel" [(ngModel)]="addToBlog">
-      <label for="checkbox"><span class="checkbox">Add to Blog</span></label>
+      <input id="checkbox" type="checkbox" name="addtoblog" #myCheckBox="ngModel" [(ngModel)]="addToBlog">
+      <label for="checkbox" class="custom-checkbox">Add to Blog</label>
 	  </div>
 
     <div *ngIf="addToBlog">

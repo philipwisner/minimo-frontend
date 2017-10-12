@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../../services/blog.service';
-import { AuthService } from '../../services/auth.service';
-import { User } from '../../models/user';
 import { Blog } from '../../models/blog';
 import { Router } from '@angular/router';
 
@@ -22,7 +20,7 @@ export class AddABlogComponent implements OnInit {
     blogDescription: '',
   };
 
-  constructor(private blogService: BlogService, private authService: AuthService, private router: Router) { }
+  constructor(private blogService: BlogService, private router: Router) { }
 
   ngOnInit() {
   }

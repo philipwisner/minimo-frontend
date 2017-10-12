@@ -1,7 +1,13 @@
 @import "../../../responsive-font-size";
+@import "../../../variables";
+
+h2 {
+  margin-left: 5px;
+}
 
 #blog-name {
-  width: 91vw;
+  width: 95vw;
+  font-family: $body-font;
   border-radius: 100px;
   border: .5px solid black;
   padding: 6px 0 6px 15px;
@@ -10,8 +16,8 @@
 }
 
 #blog-description {
-  width: 88vw;
-  font-family: sans-serif;
+  width: 95vw;
+  font-family: $body-font;
   border-radius: 10px;
   border: .5px solid black;
   padding: 15px;
@@ -22,6 +28,7 @@
   @include responsive-font-size (.9em, 1.4em, 375px, 1200px, 0.5em);
   background-color: black;
   color: white;
+  font-family: $body-font;
   text-transform: lowercase;
   border: none;
   border-radius: 100px;
