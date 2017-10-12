@@ -5,12 +5,3 @@
     <p *ngIf="user && user.description" class=user-description>{{user.description}}</p>
   </div>
 </div>
-<div class="button-row">
-  <a [routerLink]="['/profile/posts']"><button class="posts active" [ngClass]="{'active': active, 'inactive': inactive}" (click)="toggleClass()">Posts</button></a>
-  <a [routerLink]="['/profile/blogs']"><button class="blogs inactive" [ngClass]="{'active': inactive, 'inactive': active}" (click)="toggleClass()">Blogs</button></a>
-</div>
-<select name="sortby" id="sortby">
-  <option value="" selected disabled>Sort by</option>
-  <option value="newest" selected>Newest</option>
-  <option value="oldest">Oldest</option>
-</select>

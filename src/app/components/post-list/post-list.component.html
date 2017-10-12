@@ -1,3 +1,16 @@
+<div class="button-row">
+  <a [routerLink]="['/profile/posts']"><button class="posts active">Posts</button></a>
+  <a [routerLink]="['/profile/blogs']"><button class="blogs inactive">Blogs</button></a>
+</div>
+
+<select name="sortby" id="sortby">
+  <option value="" selected disabled>Sort by</option>
+  <option value="newest" selected>Newest</option>
+  <option value="oldest">Oldest</option>
+</select>
+
+  <!-- have button class be dependent on which component is displaying -->
+
 <div *ngIf="posts && posts.length === 0">
   <p class="no-posts">You have no posts yet</p>
     <p class="no-posts">Click on the button in the bottom right corner to write your first post</p>
