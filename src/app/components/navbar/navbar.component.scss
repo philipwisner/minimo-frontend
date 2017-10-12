@@ -1,4 +1,5 @@
 @import "../../../responsive-font-size";
+@import "../../../variables";
 
 header {
   max-width: 1200px;
@@ -10,21 +11,24 @@ header {
 .minimo-header {
   text-align: center;
   display: inline;
-  font-family: 'Heebo', sans-serif;
+  font-family: $heading-font;
   @include responsive-font-size (1.3em, 2.3em, 375px, 1200px, 0.5em);
-  font-weight: 600;
   a {
     color: black;
     text-decoration: none;
   }
 }
 
-.minimo {
-  position: relative;
-  top: 65vh;
-  font-family: 'Heebo', sans-serif;
-  @include responsive-font-size (1.3em, 2.3em, 375px, 1200px, 0.5em);
+.mi {
   font-weight: 600;
+}
+
+.ni {
+  font-weight: 400;
+}
+
+.mo {
+  font-weight: 200;
 }
 
 
@@ -38,7 +42,7 @@ header {
 }
 
 .logo-m {
-  max-width: 40px;
+  max-width: 35px;
   float: right;
 }
 
@@ -61,29 +65,46 @@ header {
   z-index: 1;
   background-color: white;
   box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
-  a {
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Heebo', sans-serif;
-    @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
-    font-weight: 600;
+  .username {
+    a {
+      text-transform: uppercase;
+      font-family: $heading-font;
+      color: black;
+      text-decoration: none;
+      @include responsive-font-size (.7em, 2em, 375px, 1200px, 0.5em);
+      font-weight: 600;
+    }
   }
-  h3 {
-    text-transform: uppercase;
-    font-family: 'Heebo', sans-serif;
-    @include responsive-font-size (1.1em, 2em, 375px, 1200px, 0.5em);
-    font-weight: 600;
+  .feed, .profile, .settings {
+      a {
+        color: grey;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-family: $heading-font;
+        @include responsive-font-size (.7em, 2em, 375px, 1200px, 0.5em);
+        font-weight: 400;
+      }
   }
-  button {
-    background-color: white;
-    border: none;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Heebo', sans-serif;
-    @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
-    font-weight: 600;
-    padding: 0;
+  .logout {
+    button {
+      background-color: white;
+      border: none;
+      color: grey;
+      text-decoration: none;
+      text-transform: capitalize;
+      font-family: $heading-font;
+      @include responsive-font-size (.7em, 2em, 375px, 1200px, 0.5em);
+      font-weight: 400;
+      padding: 0;
+    }
   }
+}
+
+.minimo {
+  position: relative;
+  text-align: center;
+  top: 50vh;
+  font-family: $heading-font;
+  @include responsive-font-size (1.3em, 2.3em, 375px, 1200px, 0.5em);
+  font-weight: 600;
 }

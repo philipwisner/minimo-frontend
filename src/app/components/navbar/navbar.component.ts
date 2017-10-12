@@ -2,7 +2,6 @@ import { Component, OnInit, OnChanges, OnDestroy, Input } from '@angular/core';
 import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-import { PostService } from '../../services/posts.service';
 import { environment } from '../../../environments/environment';
 
 const URL = environment.apiUrl + '/auth/upload';
