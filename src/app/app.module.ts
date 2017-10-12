@@ -17,10 +17,9 @@ import { PostService } from './services/posts.service';
 import { BlogService } from './services/blog.service';
 import { RequireAuthService } from './guards/require-auth.service';
 
-
-
 // PAGES
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
+import { FeedPageComponent } from './pages/feed-page/feed-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { SettingsPageComponent } from './pages/settings-page/settings-page.component';
@@ -49,10 +48,12 @@ import { BlogPostCardComponent } from './components/blog-post-card/blog-post-car
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: WelcomePageComponent },
+  { path: 'feed', component: FeedPageComponent },
   { path: 'auth/login', component: LoginPageComponent },
   { path: 'auth/signup', component: SignupPageComponent },
   { path: 'profile/settings', component: SettingsPageComponent, canActivate: [ RequireAuthService ]},
-  { path: 'profile', component: ProfilePageComponent },
+  { path: 'profile/posts', component: ProfilePageComponent },
+  { path: 'profile/:id', component: ProfilePageComponent },
   { path: 'profile/createpost', component: AddAPostComponent },
   { path: 'profile/createblog', component: AddABlogComponent },
   { path: 'profile/blogs', component: BlogPageComponent },
@@ -96,6 +97,7 @@ const routes: Routes = [
     AddABlogIconComponent,
     BlogPostListComponent,
     BlogPostCardComponent,
+    FeedPageComponent,
   ],
   imports: [
     BrowserModule,

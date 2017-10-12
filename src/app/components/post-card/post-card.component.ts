@@ -18,7 +18,7 @@ export class PostCardComponent implements OnInit, OnChanges {
   constructor(private postService: PostService, private authService: AuthService) { }
 
   ngOnInit() {
-    this.postService.getPostList()
+    this.postService.getYourPostList()
     .subscribe((data) => {
       this.posts = data;
     });

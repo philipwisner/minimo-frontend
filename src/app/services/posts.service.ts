@@ -30,6 +30,20 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+  getYourPostList() {
+    let options = new RequestOptions();
+    options.withCredentials = true;
+    return this.http.get(apiUrl + 'posts', options)
+      .map((res: Response) => res.json());
+  }
+
+  getPostListbyUser(id: string) {
+    let options = new RequestOptions();
+    options.withCredentials = true;
+    return this.http.get(apiUrl + `user/${id}`, options)
+      .map((res: Response) => res.json());
+  }
+
   getPostListbyBlog(id: string) {
     let options = new RequestOptions();
     options.withCredentials = true;

@@ -31,7 +31,7 @@ export class LoginPageComponent implements OnInit {
         (user) => {
         	if(user.email){
         		this.user = user,
-        		this.router.navigate(['/profile']);
+        		this.router.navigate(['/profile/posts']);
         	} else {this.message}
         },
         (err) => this.error = err
