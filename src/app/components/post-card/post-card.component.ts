@@ -1,7 +1,5 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PostService } from '../../services/posts.service';
-import { AuthService } from '../../services/auth.service';
-import { User } from '../../models/user';
 import { Post } from '../../models/post';
 import { DatePipe } from '@angular/common'
 
@@ -15,7 +13,7 @@ export class PostCardComponent implements OnInit {
   showStyle: false;
   expanded = false;
 
-  constructor(private postService: PostService, private authService: AuthService) { }
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
     this.postService.getYourPostList()

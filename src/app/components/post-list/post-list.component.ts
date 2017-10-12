@@ -1,8 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user';
 import { PostService } from '../../services/posts.service';
-import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
 import { Post } from '../../models/post';
 
 @Component({
@@ -10,25 +8,16 @@ import { Post } from '../../models/post';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss']
 })
-export class PostListComponent implements OnInit, OnDestroy {
-  user: User;
-  subscriptions = [];
+export class PostListComponent implements OnInit {
   posts: Object[];
 
-  constructor(private postService: PostService, private auth: AuthService, private router: Router) { }
+  constructor(private postService: PostService) { }
 
   ngOnInit() {
-    this.user = this.auth.getUser();
-    let subscription = this.auth.userChange$.subscribe((user) => this.user = user);
-    this.subscriptions.push(subscription);
-    this.postService.getPostList()
+    this.postService.getYourPostList()
     .subscribe((data) => {
       this.posts = data;
     });
   }
 
-
-  ngOnDestroy() {
-    this.subscriptions.forEach((subscription) => subscription.unsubscribe());
-  }
 }

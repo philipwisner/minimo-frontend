@@ -1,4 +1,5 @@
 @import "../../../responsive-font-size";
+@import "../../../variables";
 
 button {
   margin: 0 auto;
@@ -11,20 +12,20 @@ button {
 }
 
 h1 {
-  font-family: 'Heebo', sans-serif;
+  font-family: $heading-font;
   margin: 0 auto;
-  @include responsive-font-size (1.7em, 2em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (1.3em, 2em, 375px, 1200px, 0.5em);
 }
 
 .post-date {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   color: grey;
   margin: 0 auto;
   @include responsive-font-size (.7em, 1em, 375px, 1200px, 0.5em);
 }
 
 .post-content {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   margin: 10px 0 15px 0;
   max-height: 145px;
   overflow: hidden;
@@ -33,7 +34,7 @@ h1 {
 }
 
 .expand {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   margin: 10px 0 15px 0;
   max-height: 100%;
   transition: all 200ms ease;
