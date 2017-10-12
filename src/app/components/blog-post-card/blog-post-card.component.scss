@@ -1,4 +1,5 @@
 @import "../../../responsive-font-size";
+@import "../../../variables";
 
 button {
   margin: 0 auto;
@@ -8,23 +9,25 @@ button {
   border: .5px solid grey;
   border-radius: 100px;
   padding: 5px 20px;
+  font-family: $body-font;
+  @include responsive-font-size (.5em, 2em, 375px, 1200px, 0.5em);
 }
 
 h1 {
-  font-family: 'Heebo', sans-serif;
+  font-family: $heading-font;
   margin: 0 auto;
   @include responsive-font-size (1.7em, 2em, 375px, 1200px, 0.5em);
 }
 
 .post-date {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   color: grey;
   margin: 0 auto;
   @include responsive-font-size (.7em, 1em, 375px, 1200px, 0.5em);
 }
 
 .post-content {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   margin: 10px 0 15px 0;
   max-height: 145px;
   overflow: hidden;
@@ -33,7 +36,7 @@ h1 {
 }
 
 .expand {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $body-font;
   margin: 10px 0 15px 0;
   max-height: 100%;
   transition: all 200ms ease;
@@ -51,6 +54,7 @@ h1 {
 .no-posts {
   padding: 0 20px;
   text-align: center;
+  font-family: $body-font;
   margin-bottom: 5vh;
   @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
 

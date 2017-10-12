@@ -5,6 +5,7 @@ import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../models/user';
 import { Post } from '../../models/post';
+import { Blog } from '../../models/blog';
 import { DatePipe } from '@angular/common'
 
 @Component({
@@ -30,8 +31,10 @@ export class BlogPostCardComponent implements OnInit {
   ngOnInit() {
     this.user = this.authService.getUser();
     let blogSubscription = this.ActivatedRoute.params.subscribe(params=>this.blogId = params['id']);
+
     this.blogService.getBlog(this.blogId).subscribe((data) => this.blog = data);
     let userSubscription = this.authService.userChange$.subscribe((user) => this.user = user);
+
     this.postService.getPostListbyBlog(this.blogId)
     .subscribe((data) => {
       this.posts = data;

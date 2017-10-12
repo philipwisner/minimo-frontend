@@ -1,11 +1,16 @@
-* {
-  box-sizing: border-box;
-
-}
-
 @import 'responsive-font-size';
 @import 'variables';
 
+
+* {
+  box-sizing: border-box;
+}
+
+
+img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
 
 
 // Testing for color theme functionality
