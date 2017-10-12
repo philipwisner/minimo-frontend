@@ -6,8 +6,8 @@
   </div>
 </div>
 <div class="button-row">
-  <a [routerLink]="['/profile']"><button class="posts" [ngClass]="{'active': hasActive, 'inactive': hasInactive}" (click)="toggleClass()">Posts</button></a>
-  <a [routerLink]="['/profile/blogs']"><button class="blogs" [ngClass]="{'active': hasInactive, 'inactive': hasActive}" (click)="toggleClass()">Blogs</button></a>
+  <a [routerLink]="['/profile/posts']"><button class="posts active" [ngClass]="{'active': active, 'inactive': inactive}" (click)="toggleClass()">Posts</button></a>
+  <a [routerLink]="['/profile/blogs']"><button class="blogs inactive" [ngClass]="{'active': inactive, 'inactive': active}" (click)="toggleClass()">Blogs</button></a>
 </div>
 <select name="sortby" id="sortby">
   <option value="" selected disabled>Sort by</option>

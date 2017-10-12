@@ -41,7 +41,7 @@ export class AddAPostComponent implements OnInit {
 
   handleCreatePostForm(myForm) {
     this.postService.insertNew(this.formData).subscribe(() => {
-      this.router.navigate(['/profile']);
+      this.router.navigate(['/profile/posts']);
      });
   }
 

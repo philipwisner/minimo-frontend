@@ -2,7 +2,7 @@
   <!-- <img src="../../../assets/pictures/profile.png" alt="profile picture" class="profile-pic" (click)="showStyle = !showStyle;"> -->
   <img src="{{apiUrl+user.profilePhoto}}" alt="profile picture" *ngIf="user && user.profilePhoto" class="profile-pic" (click)="showStyle = !showStyle;">
   <p class="minimo-header" *ngIf="!user"><a [routerLink]="['/home']">minimo</a></p>
-  <p class="minimo-header" *ngIf="user"><a [routerLink]="['/profile']">minimo</a></p>
+  <p class="minimo-header" *ngIf="user"><a [routerLink]="['/profile/posts']">minimo</a></p>
   <img src="../../../assets/pictures/minimo-m.svg" alt="logo" class="logo-m">
 </header>
 
@@ -13,8 +13,9 @@
     <p><a [routerLink]="['/auth/signup']">Sign up</a></p>
   </div>
   <div *ngIf="user">
-    <h3> <a [routerLink]="['/profile']">{{user.name}}</a></h3>
-    <p><a [routerLink]="['/profile']">Profile</a></p>
+    <h3> <a [routerLink]="['/profile/posts']">{{user.name}}</a></h3>
+    <p> <a [routerLink]="['/feed']">Feed</a></p>
+    <p><a [routerLink]="['/profile/posts']">Profile</a></p>
     <p><a [routerLink]="['/profile/settings']">Settings</a></p>
     <p><button (click)="logout()">Logout</button></p>
   </div>

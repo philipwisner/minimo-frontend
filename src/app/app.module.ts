@@ -53,10 +53,10 @@ const routes: Routes = [
   { path: 'auth/signup', component: SignupPageComponent },
   { path: 'profile/settings', component: SettingsPageComponent, canActivate: [ RequireAuthService ]},
   { path: 'profile/posts', component: ProfilePageComponent },
+  { path: 'profile/blogs', component: BlogPageComponent },
   { path: 'profile/:id', component: ProfilePageComponent },
   { path: 'profile/createpost', component: AddAPostComponent },
   { path: 'profile/createblog', component: AddABlogComponent },
-  { path: 'profile/blogs', component: BlogPageComponent },
   { path: 'profile/blogs/:id', component: BlogHomePageComponent },
   // { path: 'profile/settgins/picture', component:  },
 

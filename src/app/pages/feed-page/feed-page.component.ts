@@ -3,6 +3,8 @@ import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { PostService } from '../../services/posts.service';
+import { Post } from '../../models/post';
+import { DatePipe } from '@angular/common'
 
 @Component({
   selector: 'app-feed-page',
@@ -11,24 +13,28 @@ import { PostService } from '../../services/posts.service';
 })
 export class FeedPageComponent implements OnInit {
 user: User;
-subscriptions = [];
+posts: Object[];
+showStyle = false;
+expanded = false;
 
-  constructor(private auth: AuthService, private router: Router) { }
-
+  constructor(private postService: PostService, private auth: AuthService, private router: Router) { }
   ngOnInit() {
-    this.user = this.auth.getUser();
-    let subscription = this.auth.userChange$.subscribe((user) => this.user = user);
-    this.subscriptions.push(subscription);
-  }
-
-  logout() {
-    this.auth.logout().subscribe(() => {
-      this.router.navigate(['/home']);
+    this.postService.getPostList()
+    .subscribe((data) => {
+      this.posts = data;
     });
   }
 
-  ngOnDestroy() {
-    this.subscriptions.forEach((subscription) => subscription.unsubscribe());
+  ngOnChanges() {
+    this.postService.getPostList()
+    .subscribe((data) => {
+      this.posts = data;
+    });
   }
 
-}
+
+  handleExpandConent() {
+    this.expanded = !this.expanded;
+  }
+
+  }

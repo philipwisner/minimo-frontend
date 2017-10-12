@@ -17,8 +17,8 @@ export class ProfileHeaderComponent implements OnInit, OnChanges {
   apiUrl = environment.apiUrl;
   user: User;
   subscriptions = [];
-  hasInactive = false;
-  hasActive = true;
+  inactive = false;
+  active = true;
 
   constructor(private auth: AuthService, private router: Router, private postService: PostService) { }
 
@@ -44,10 +44,8 @@ export class ProfileHeaderComponent implements OnInit, OnChanges {
   }
 
   toggleClass() {
-    console.log(this.hasInactive);
-    console.log(this.hasActive)
-    this.hasInactive = true;
-    this.hasActive = false;
+    this.inactive = !this.inactive;
+    this.active = !this.active;
     //need to toggle adding and removing the class active & inactive
     }
   }
