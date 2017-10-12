@@ -37,7 +37,6 @@ import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogHeaderComponent } from './components/blog-header/blog-header.component';
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
-import { AuthLogoutComponent } from './components/auth-logout/auth-logout.component';
 import { AddAPostIconComponent } from './components/add-a-post-icon/add-a-post-icon.component';
 import { AddABlogComponent } from './components/add-a-blog/add-a-blog.component';
 import { AddABlogIconComponent } from './components/add-a-blog-icon/add-a-blog-icon.component';
@@ -86,7 +85,6 @@ const routes: Routes = [
     BlogCardComponent,
     BlogHeaderComponent,
     AddAPostComponent,
-    AuthLogoutComponent,
     AddAPostIconComponent,
     AddABlogComponent,
     AddABlogIconComponent,
