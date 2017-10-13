@@ -1,6 +1,6 @@
 <h1><a [routerLink]="['/home']"><span class="mi">mi</span><span class="ni">ni</span><span class="mo">mo</span></a></h1>
 <form [ngClass]="{'has-error': error}" novalidate>
-  <div class="form-group field" [ngClass]="{'has-error': error}">
+  <div class="form-group field" [ngClass]="{'has-error': message}">
     <input type="text" [(ngModel)]="user.email" name="email" #myEmail=ngModel required/>
     <p>email</p>
   </div>
