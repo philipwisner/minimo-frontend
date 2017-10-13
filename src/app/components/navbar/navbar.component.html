@@ -3,7 +3,7 @@
   <img src="{{apiUrl+user.profilePhoto}}" alt="" *ngIf="user && user.profilePhoto" class="profile-pic" (click)="showStyle = !showStyle;">
   <p class="minimo-header" *ngIf="!user"><a [routerLink]="['/home']"><span class="mi">mi</span><span class="ni">ni</span><span class="mo">mo</span></a></p>
   <p class="minimo-header" *ngIf="user"><a [routerLink]="['/profile/posts']"><span class="mi">mi</span><span class="ni">ni</span><span class="mo">mo</span></a></p>
-  <img src="../../../assets/pictures/minimo-m.svg" alt="logo" class="logo-m">
+  <img src="../../../assets/pictures/minimo-m-inverse.png" alt="logo" class="logo-m">
 </header>
 
 <div [style.display]="getStyle()" class="left-nav">
