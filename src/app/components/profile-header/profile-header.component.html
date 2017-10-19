@@ -1,5 +1,7 @@
 <div class="profile-info">
-  <img src="{{apiUrl+user.profilePhoto}}" alt="profile picture" *ngIf="user && user.profilePhoto">
+  <div class="profile-image" [ngStyle]="{'background-image': 'url(' + apiUrl+user.profilePhoto + ')'}" *ngIf="user && user.profilePhoto">
+    <!-- <img src="{{apiUrl+user.profilePhoto}}" alt="profile picture" *ngIf="user && user.profilePhoto"> -->
+  </div>
   <div class="profile-text">
     <p class="username">{{user && user.name}}</p>
     <p *ngIf="user && user.description" class=user-description>{{user.description}}</p>

@@ -2,17 +2,18 @@
 @import "../../../variables";
 
 
+
 .profile-info {
   margin: 0 auto;
   margin-bottom: 25px;
   min-height: 13vh;
-  img {
-    margin: 0 auto;
-    display: inline-block;
-    margin-left: 4vw;
-    margin-top: 2.5vh;
-    max-width: 75px;
-    border-radius: 100px;
+  .profile-image {
+    width: 75px;
+    height: 75px;
+    background-position: 50%;
+    background-size: cover;
+    display: block;
+    border-radius: 50%;
     border: .5px solid grey;
   }
   .profile-text {

@@ -58,10 +58,10 @@ const routes: Routes = [
   { path: 'profile/blogs/:id', component: BlogHomePageComponent },
 
   //WORKING ON
-  { path: 'profile/:id', component: ProfilePageComponent },
+  { path: 'profile/:id/posts', component: ProfilePageComponent },
 
   // PATHS TO DO
-  { path: 'profile/:id/blogs', component: ProfilePageComponent },
+  { path: 'profile/:id/blogs', component: BlogPageComponent },
   { path: 'profile/:id/blogs/:id', component: BlogPageComponent },
   { path: 'profile/:id/blogs/:id/posts', component: BlogHomePageComponent },
 ];
