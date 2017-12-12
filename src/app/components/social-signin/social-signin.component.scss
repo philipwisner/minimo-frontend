@@ -12,4 +12,5 @@ img {
 
 p {
   font-family: $body-font;
+  @include responsive-font-size (.8em, 1.5em, 375px, 1200px, 0.5em);
 }

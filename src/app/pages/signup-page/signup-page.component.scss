@@ -1,14 +1,23 @@
 @import "../../../responsive-font-size";
 @import "../../../variables";
 
+
+@media screen and (min-width : 320px) and (max-width : 480px) {
+  h1 {
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+  }
+}
+
 * {
   text-align: center;
 }
 
+
 h1 {
   font-family: $heading-font;
-  margin-top: 6vh;
-  margin-bottom: 8vh;
+  // margin-top: 6vh;
+  // margin-bottom: 8vh;
 	@include responsive-font-size (4em, 6em, 375px, 1200px, 0.5em);
   a {
     color: black;
@@ -46,6 +55,7 @@ input {
 form p {
   margin-top: 5px;
   font-family: $body-font;
+  @include responsive-font-size (.8em, 1.5em, 375px, 1200px, 0.5em);
 }
 
 
@@ -85,6 +95,7 @@ button {
 .existing-user {
   margin-top: 5vh;
   font-family: $body-font;
+  @include responsive-font-size (.8em, 1.5em, 375px, 1200px, 0.5em);
 }
 
 a {

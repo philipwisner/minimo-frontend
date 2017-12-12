@@ -1,6 +1,14 @@
 @import "../../../responsive-font-size";
 @import "../../../variables";
 
+
+.feed {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 1vh;
+  margin-bottom: 4vh;
+}
+
 button {
   margin: 0 auto;
   display: block;
@@ -22,7 +30,7 @@ button {
     text-align: center;
     font-weight: 600;
     color: white;
-    @include responsive-font-size (1.5em, 1.7em, 375px, 1200px, 0.5em);
+    @include responsive-font-size (1.4em, 2.5em, 375px, 1200px, 0.5em);
   }
   img {
     max-width: 50px;
@@ -34,7 +42,7 @@ button {
 h1 {
   font-family: $heading-font;
   margin: 0 auto;
-  @include responsive-font-size (1.7em, 2em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (1.4em, 2em, 375px, 1200px, 0.5em);
 }
 
 .post-date {

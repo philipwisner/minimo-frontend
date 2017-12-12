@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<p class="welcome">hello,</p>
-<p class="username">{{user && user.name}}</p>
+<p class="welcome">hello, <span class="username">{{user && user.name}}</span></p>
+<!-- <p class="username">{{user && user.name}}</p> -->
 
 <div *ngIf="editUser">
   <form (ngSubmit)="handleUpdateUserForm(myForm)" #myUserForm="ngForm" novalidate>

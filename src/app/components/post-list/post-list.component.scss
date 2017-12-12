@@ -1,12 +1,15 @@
 @import "../../../responsive-font-size";
 @import "../../../variables";
 
-.no-posts {
-  padding: 0 20px;
-  text-align: center;
-  margin-bottom: 5vh;
-  font-family: $body-font;
-  @include responsive-font-size (1em, 2em, 375px, 1200px, 0.5em);
+.no-posts-list {
+  margin-top: 4vh;
+  .no-posts {
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 5vh;
+    font-family: $body-font;
+    @include responsive-font-size (1em, 1.8em, 375px, 1200px, 0.5em);
+  }
 }
 
 .button-row {
@@ -22,7 +25,7 @@ select {
     padding: 2px 5px 2px 10px;
     text-align: center;
     margin-bottom: 10px;
-    @include responsive-font-size (.55em, 2em, 375px, 1200px, 0.5em);
+    @include responsive-font-size (.55em, 1.3em, 375px, 1200px, 0.5em);
 }
 
 .active {
