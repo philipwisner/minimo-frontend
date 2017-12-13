@@ -1,7 +1,8 @@
 # Minimo
-"A minimalist blogging and thought capturing platform"
 
 <div style="text-align:center; height: 200px;"><img src ="http://philipwisner.com/images/minimo-line.svg" /></div>
+
+"A minimalist blogging and thought capturing platform"
 
 <br/>
 
@@ -12,6 +13,7 @@ Minimo was created as my final project for the Ironhack Full Stack Web Developme
 
 ## Demo
 * See minimo live [here](https://minimo.herokuapp.com/home)
+* Take a look at the backend code [here](https://github.com/philipwisner/minimo-backend)
 
 <br/>
 
