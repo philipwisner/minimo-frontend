@@ -1,36 +1,62 @@
 @import "../../../responsive-font-size";
 @import "../../../variables";
 
+
+@media screen and (min-width : 320px) and (max-width : 768px) {
+  #blog-name {
+    width: 95vw;
+  }
+  #blog-description {
+    width: 95vw;
+  }
+}
+
+
+@media screen and (min-width : 769px) and (max-width : 5000px) {
+  #blog-name {
+    width: 50vw;
+  }
+  #blog-description {
+    width: 50vw;
+  }
+}
+
+
 h2 {
-  margin-left: 5px;
+  text-align: center;
   font-family: $heading-font;
-  @include responsive-font-size (1.3em, 2.5em, 375px, 1200px, 0.5em);
+  margin-top: 5vh;
+  @include responsive-font-size (1.5em, 2.5em, 320px, 1200px, 0.5em);
 }
 
 .error {
-  margin-left: 10px;
   font-family: $body-font;
-  color: grey;
-  @include responsive-font-size (.85em, 2.5em, 375px, 1200px, 0.5em);
+  text-align: center;
+  margin-top: 5vh;
+  color: #C25052;
+  @include responsive-font-size (.8em, 1.5em, 320px, 1200px, 0.5em);
 }
 
 #blog-name {
-  width: 95vw;
+  margin: 0 auto;
+  display: block;
   font-family: $body-font;
   border-radius: 100px;
   border: .5px solid black;
   padding: 6px 0 6px 15px;
   margin-bottom: 20px;
-  @include responsive-font-size (1em, 1.5em, 375px, 1200px, 0.5em);
+  margin-top: 5vh;
+  @include responsive-font-size (.8em, 1.5em, 320px, 1200px, 0.5em);
 }
 
 #blog-description {
-  width: 95vw;
+  margin: 0 auto;
+  display: block;
   font-family: $body-font;
-  border-radius: 10px;
+  border-radius: 100px;
   border: .5px solid black;
-  padding: 15px;
-  @include responsive-font-size (1.2em, 1.75em, 375px, 1200px, 0.5em);
+  padding: 6px 0 6px 15px;
+  @include responsive-font-size (.8em, 1.5em, 320px, 1200px, 0.5em);
 }
 
 #submit-btn {
@@ -39,11 +65,13 @@ h2 {
   color: white;
   font-family: $body-font;
   text-transform: lowercase;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
   border: none;
   border-radius: 100px;
   padding: 6px 12px;
   text-align: center;
   width: 150px;
-  margin-top: 3vh;
-  float: right;
+  margin-top: 10vh;
 }
