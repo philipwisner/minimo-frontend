@@ -2,7 +2,7 @@
 
 <div style="text-align:center; height: 200px;"><img src ="http://philipwisner.com/images/minimo-line.svg" /></div>
 
-"A minimalist blogging and thought capturing platform"
+>"A minimalist blogging and thought capturing platform"
 
 <br/>
 
