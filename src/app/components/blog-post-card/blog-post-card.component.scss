@@ -10,13 +10,12 @@ button {
   border-radius: 100px;
   padding: 5px 20px;
   font-family: $body-font;
-  @include responsive-font-size (.5em, 2em, 375px, 1200px, 0.5em);
 }
 
 h1 {
   font-family: $heading-font;
   margin: 0 auto;
-  @include responsive-font-size (1.7em, 2em, 375px, 1200px, 0.5em);
+  @include responsive-font-size (1.2em, 2em, 320px, 1200px, 0.5em);
 }
 
 .post-date {
@@ -45,6 +44,8 @@ h1 {
 }
 
 .post-card {
+  max-width: 1200px;
+  margin: 0 auto;
   box-shadow: 0 2px 3px rgba(0,0,0,0.16), 0 2px 3px rgba(0,0,0,0.23);
   margin-bottom: 10px;
   padding: 10px 15px;
