@@ -5,7 +5,7 @@
   <button (click)="handleExpandConent()">Read More</button>
 </div>
 
-<div *ngIf="posts && posts.length === 0">
+<div *ngIf="posts && posts.length === 0" class="no-posts-list">
   <p class="no-posts">You have no posts yet</p>
   <p class="no-posts">Click on the button in the bottom right corner to write your first post</p>
 </div>
