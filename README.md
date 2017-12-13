@@ -1,7 +1,7 @@
 # Minimo
 "A minimalist blogging and thought capturing platform"
 
-<div style="text-align:center; width: 200px;"><img src ="http://philipwisner.com/images/minimo-user.png" /></div>
+<div style="text-align:center; height: 200px;"><img src ="http://philipwisner.com/images/minimo-user.png" /></div>
 
 <br/>
 
@@ -16,7 +16,8 @@ Minimo was created as my final project for the Ironhack Full Stack Web Developme
 <br/>
 
 ## Development
-I am a very visual developer, I like to have a basic wireframe ready along with all my user stories and data models defined before I start coding. I spent the weekend before our final project defining my data models relations and user stories. I was able to have zero redundancy in my database. Everything is linked by userId, so I am never saving something twice. Then based off of that I spent the entire first day creating my wireframes which you can check out [here](http://philipwisner.com/images/Minimo Mobile.pdf).
+I am a very visual developer, I like to have a basic wireframe ready along with all my user stories and data models defined before I start coding. I spent the weekend before our final project defining my data models relations and user stories. I was able to have zero redundancy in my database. Everything is linked by userId, so I am never saving something twice. Then based off of that I spent the entire first day creating my wireframes which you can check out 
+[here](http://philipwisner.com/images/Minimo%Mobile.pdf).
 
 Then I spent almost all of the second day battling Angular. I was familiar with creating an Express app with Node and MongoDB but now I had to strip back all of the excess that is generated for an express app and do everything with Angular. Since we learned Angular in just a few days, it was a struggle creating the frontend app and the backend app and then having them interface. I would generate components in the wrong area, I would mess up names. I wound up deleting the entire Angular app multiple times. By then end of the day I had them both up and running and communicating.
 
@@ -38,9 +39,10 @@ Want to read more about the creation of minimo or my Ironhack experience, checko
 * [Node.js](https://nodejs.org/en/)
 * [MongoDB](https://www.mongodb.com/)
 * [Sass](http://sass-lang.com/)
-* Prototyping done with [Adobe Xd](https://www.adobe.com/products/experAience-design.html)
+* Prototyping done with [Adobe Xd](http://www.adobe.com/products/xd.html)
 
 <br/>
+
 ## To-do
 * Be able to see other users profiles
 * Be able to edit/delete posts & blogs
