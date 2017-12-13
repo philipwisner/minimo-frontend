@@ -11,7 +11,7 @@ const URL = environment.apiUrl + '/auth/upload';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnDestroy {
 @Input() userId;
   apiUrl = environment.apiUrl;
   showStyle = false;
@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.auth.getUser();
-    let subscription = this.auth.userChange$.subscribe((user) => this.user = user);
+    const subscription = this.auth.userChange$.subscribe((user) => this.user = user);
     this.subscriptions.push(subscription);
   }
 
@@ -32,10 +32,10 @@ export class NavbarComponent implements OnInit {
   }
 
   getStyle() {
-    if(this.showStyle) {
-      return "";
+    if (this.showStyle) {
+      return '';
     } else {
-      return "none";
+      return 'none';
     }
   }
 
