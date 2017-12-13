@@ -1,16 +1,19 @@
 # Minimo
 "A minimalist blogging and thought capturing platform"
 
-<div style="text-align:center"><img src ="http://philipwisner.com/images/minimo-user.png" /></div>
+<div style="text-align:center; width: 200px;"><img src ="http://philipwisner.com/images/minimo-user.png" /></div>
 
 <br/>
 
 ## Introduction
 Minimo was created as my final project for the Ironhack Full Stack Web Development Bootcamp in Barcelona I was tasked to create a MEAN stack app that had at least 3 data models. I couldn't really think of a unique idea, but I knew I wanted a place that I could write blogs but also individual posts. Basically I wanted to create Medium but with a blog feature. I knew that this could have at least 3 data models and could be completed in 2 weeks. And so minimo was born.
 
+<br/>
+
 ## Demo
 * See minimo live [here](https://minimo.herokuapp.com/home)
 
+<br/>
 
 ## Development
 I am a very visual developer, I like to have a basic wireframe ready along with all my user stories and data models defined before I start coding. I spent the weekend before our final project defining my data models relations and user stories. I was able to have zero redundancy in my database. Everything is linked by userId, so I am never saving something twice. Then based off of that I spent the entire first day creating my wireframes which you can check out [here](http://philipwisner.com/images/Minimo Mobile.pdf).
@@ -27,6 +30,7 @@ We then presented our apps to our class. You can see my presentation [here](http
 
 Want to read more about the creation of minimo or my Ironhack experience, checkout my blog at [philipwisner.com](http://philipwisner.com/pages/blogs/ironhack.html) 
 
+<br/>
 
 ## Built with
 * [Angular](https://angular.io/)
@@ -36,7 +40,7 @@ Want to read more about the creation of minimo or my Ironhack experience, checko
 * [Sass](http://sass-lang.com/)
 * Prototyping done with [Adobe Xd](https://www.adobe.com/products/experAience-design.html)
 
-
+<br/>
 ## To-do
 * Be able to see other users profiles
 * Be able to edit/delete posts & blogs
