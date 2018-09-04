@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { FileUploadModule } from 'ng2-file-upload';
+import { QuillModule } from 'ngx-quill';
 
 // MAIN APP
 import { AppComponent } from './app.component';
@@ -97,7 +98,8 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     HttpModule,
     FormsModule,
-    FileUploadModule
+    FileUploadModule,
+    QuillModule,
   ],
   providers: [AuthService, RequireAuthService, PostService, BlogService],
   bootstrap: [AppComponent]
