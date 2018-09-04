@@ -25,7 +25,7 @@ Then I spent almost all of the second day battling Angular. I was familiar with 
 
 The next two days I was working on just the login/signup authorization. Using passport when it was just an express app was super easy for me, I had it working in less than a hour, but Angular was not having it. It took two days of troubleshooting and writing additional functions, along with lots of googling to finally get it working. 
 
-I then fifinishedff the week and weekend creating most of the pages and components needed for minimo based off the user stories, but there wasn't much functionality yet.
+I then finished the week and weekend creating most of the pages and components needed for minimo based off the user stories, but there wasn't much functionality yet.
 
 I started off the final week adding all the functionality to minimo, starting with the settings page and main profile page. After that was done, I worked on adding posts to the profile. The next day I worked on creating blogs and then being able to add posts to blogs. It was at this point I had too spend some time sorting the posts to only show posts that don't belong to a blog. I had most of the major features working by Wednesday of the second week, but there was still a lot of bugs. So I spent most of that day fixing all the bugs and errors, and then at the end of the day added to photo upload ability, which took a while to get working. Then on Thursday our internal presentation day, I decided to add a global feed to the app, which of course added more bugs so I had to leave it pretty bare.
 
