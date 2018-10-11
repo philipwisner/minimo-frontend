@@ -29,7 +29,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   onClickedOutside(e: Event) {
-    console.log("Clicked outside:", e);
     this.showStyle = false;
   }
 
