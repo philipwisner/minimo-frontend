@@ -4,6 +4,8 @@ import { RouterModule, Routes } from "@angular/router";
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { FileUploadModule } from 'ng2-file-upload';
+import { ClickOutsideModule } from "ng-click-outside";
+
 
 // MAIN APP
 import { AppComponent } from './app.component';
@@ -90,16 +92,17 @@ const routes: Routes = [
     AddABlogIconComponent,
     BlogPostListComponent,
     BlogPostCardComponent,
-    FeedPageComponent,
+    FeedPageComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpModule,
     FormsModule,
-    FileUploadModule
+    FileUploadModule,
+    ClickOutsideModule
   ],
   providers: [AuthService, RequireAuthService, PostService, BlogService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
