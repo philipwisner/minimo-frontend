@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PostService } from '../../services/posts.service';
 import { Post } from '../../models/post';
 import { DatePipe } from '@angular/common'
@@ -12,14 +12,11 @@ export class PostCardComponent implements OnInit {
   posts: Object[];
   showStyle: false;
   expanded = false;
+  @Input() post: 'post';
 
   constructor(private postService: PostService) { }
 
   ngOnInit() {
-    this.postService.getYourPostList()
-    .subscribe((data) => {
-      this.posts = data;
-    });
   }
 
   handleExpandConent() {
