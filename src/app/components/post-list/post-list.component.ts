@@ -10,7 +10,6 @@ import { Post } from '../../models/post';
 })
 export class PostListComponent implements OnInit {
   posts: { Object: Post }[];
-  sortedPosts: { Object: Post }[];
 
   constructor(private postService: PostService) { }
 
