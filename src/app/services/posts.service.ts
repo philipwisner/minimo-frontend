@@ -41,6 +41,14 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
+// LIST OF ALL POSTS (LOGGEN IN) - REVERSE ORDER
+  getYourReverseList() {
+    let options = new RequestOptions();
+    options.withCredentials = true;
+    return this.http.get(apiUrl + 'reverse', options)
+      .map((res: Response) => res.json());
+  }
+
   // LIST OF ALL POSTS OF A USER (PASS USER ID)
   getPostListbyUser(id: string) {
     let options = new RequestOptions();
