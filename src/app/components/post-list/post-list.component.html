@@ -3,10 +3,10 @@
   <a [routerLink]="['/profile/blogs']"><button class="blogs inactive">Blogs</button></a>
 </div>
 
-<select name="sortby" id="sortby">
+<select name="sortby" id="sortby" (change)="updateSort($event.target.value)">
   <option value="" selected disabled>Sort by</option>
-  <option value="newest" selected>Newest</option>
-  <option value="oldest">Oldest</option>
+  <option [ngValue]="newest" selected>Newest</option>
+  <option [ngValue]="oldest">Oldest</option>
 </select>
 
   <!-- have button class be dependent on which component is displaying -->
@@ -15,7 +15,10 @@
     <p class="no-posts">Click on the button in the bottom right corner to write your first post</p>
 </div>
 
-<app-post-card></app-post-card>
+<div *ngFor="let post of posts">
+  <app-post-card [post]="post"></app-post-card>
+</div>
+
 
 
 <app-add-a-post-icon></app-add-a-post-icon>
