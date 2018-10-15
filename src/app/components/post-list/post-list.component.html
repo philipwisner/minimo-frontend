@@ -3,11 +3,13 @@
   <a [routerLink]="['/profile/blogs']"><button class="blogs inactive">Blogs</button></a>
 </div>
 
-<select name="sortby" id="sortby" (change)="updateSort($event.target.value)">
+<div class="select-container">
+<select name="sortby" class="select-menu" id="sortby" (change)="updateSort($event.target.value)">
   <option value="" selected disabled>Sort by</option>
   <option [ngValue]="newest" selected>Newest</option>
   <option [ngValue]="oldest">Oldest</option>
 </select>
+</div>
 
   <!-- have button class be dependent on which component is displaying -->
 <div *ngIf="posts && posts.length === 0" class="no-posts-list">
