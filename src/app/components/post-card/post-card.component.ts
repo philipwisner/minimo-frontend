@@ -9,7 +9,7 @@ import { DatePipe } from '@angular/common'
   styleUrls: ['./post-card.component.scss']
 })
 export class PostCardComponent implements OnInit {
-  posts: Object[];
+  posts: [Post];
   showStyle: false;
   expanded = false;
   @Input() post: 'post';
@@ -17,6 +17,7 @@ export class PostCardComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit() {
+
   }
 
   handleExpandConent() {
