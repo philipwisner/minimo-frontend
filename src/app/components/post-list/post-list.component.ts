@@ -9,7 +9,7 @@ import { Post } from '../../models/post';
   styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent implements OnInit {
-  posts: { Object: Post }[];
+  posts: [Post];
 
   constructor(private postService: PostService) { }
 
