@@ -18,19 +18,34 @@ export class SignupPageComponent implements OnInit {
 
   error: string;
   message: string;
+  missingCredentials: string;
 
   constructor(private auth: AuthService, private router: Router) { }
 
   signup() {
     this.error = null;
+    if (!this.user.name || !this.user.email || !this.user.password) {
+      this.missingCredentials = 'Missing credentials';
+      return;
+    }
     this.auth.signup(this.user).subscribe(
       (user) => {
       	if(user.email){
       		this.user = user;
       		this.router.navigate(['/profile/settings']);
-      	} else {this.message}
+      	} else {
+          this.message;
+        }
       },
-      (err) => this.error = err
+      (err) => {
+        console.log('err is', err);
+        if (err.statusText === "Unprocessable Entity") {
+          this.error = "Email already used";
+          return;
+        } else {
+          this.error = err;
+        }
+      }
     );
   }
 

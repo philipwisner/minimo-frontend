@@ -30,6 +30,8 @@
   </div>
   <div class="form-group actions">
     <button (click)="signup()">Sign Up</button>
+    <p *ngIf="missingCredentials && (!myName.dirty || !myEmail.dirty || !myPassword.dirty)" class="error">{{missingCredentials}}</p>
+    <p *ngIf="error" class="error">{{error}}</p>
   </div>
 </form>
 
