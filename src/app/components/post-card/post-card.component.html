@@ -2,7 +2,7 @@
   <h1> {{post.postTitle}} </h1>
   <p class="post-date"> {{ post.postDate | date:'d MMM y h:mm a'}} </p>
   <p class="post-content" [ngClass]="{'expand': expanded}"> {{post.postContent}} </p>
-  <button *ngIf="post.postContent.length > 400" (click)="handleExpandConent(post)">
+  <button *ngIf="post.postContent.length > 500" (click)="handleExpandConent(post)">
     <span *ngIf="!expanded">Read More</span>
     <span *ngIf="expanded">Hide</span>
   </button>
