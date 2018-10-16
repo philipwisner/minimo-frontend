@@ -18,6 +18,7 @@ export class LoginPageComponent implements OnInit {
 
   error: string;
   message: any;
+  missingCredentials: string;
 
   constructor(private auth: AuthService, private router: Router) { }
 
@@ -26,6 +27,10 @@ export class LoginPageComponent implements OnInit {
 
   login() {
       this.error = null;
+      if (!this.user.email || !this.user.password) {
+        this.missingCredentials = 'Email and password are required';
+        return;
+      }
       this.auth.login(this.user).subscribe(
         (user) => {
         	if(user.email){
@@ -33,7 +38,14 @@ export class LoginPageComponent implements OnInit {
         		this.router.navigate(['/profile/posts']);
         	} else {this.message}
         },
-        (err) => this.error = err
+        (err) =>{
+          if (err.statusText === "Not Found") {
+            this.error = 'Invalid email or password';
+            return;
+          } else {
+            this.error = err
+          }
+        }
       );
     }
 }
