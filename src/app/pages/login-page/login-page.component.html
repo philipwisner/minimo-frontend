@@ -20,6 +20,7 @@
   </div>
   <div class="form-group actions">
     <button (click)="login()">login</button>
+    <p *ngIf="missingCredentials && (!myEmail.dirty || !myPassword.dirty)" class="error">{{missingCredentials}}</p>
     <p *ngIf="error" class="error">{{error}}</p>
   </div>
 </form>
