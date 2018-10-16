@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { AuthService } from "../../services/auth.service";
 
 @Component({
   selector: 'app-social-signin',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialSigninComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  google() {
+    this.auth.google().subscribe();
   }
 
 }
