@@ -65,15 +65,6 @@ export class PostService {
       .map((res: Response) => res.json());
   }
 
-  // LIST OF ALL POSTS OF A USER IN REVERSE ORDER) -- NOT WORKING!!
-  getPostListOldest() {
-    console.log("oldest service called");
-    let options = new RequestOptions();
-    options.withCredentials = true;
-    return this.http.get(apiUrl + 'oldest', options)
-      .map((res: Response) => res.json());
-  }
-
   // CREATE A NEW POST
   insertNew(post) {
     let options = new RequestOptions();
