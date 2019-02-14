@@ -35,7 +35,6 @@ import { ProfileHeaderComponent } from './components/profile-header/profile-head
 import { PostListComponent } from './components/post-list/post-list.component';
 import { PostCardComponent } from './components/post-card/post-card.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
-import { BlogCardComponent } from './components/blog-card/blog-card.component';
 import { BlogHeaderComponent } from './components/blog-header/blog-header.component';
 import { AddAPostComponent } from './components/add-a-post/add-a-post.component';
 import { AddAPostIconComponent } from './components/add-a-post-icon/add-a-post-icon.component';
@@ -83,7 +82,6 @@ const routes: Routes = [
     PostListComponent,
     PostCardComponent,
     BlogListComponent,
-    BlogCardComponent,
     BlogHeaderComponent,
     AddAPostComponent,
     AddAPostIconComponent,
