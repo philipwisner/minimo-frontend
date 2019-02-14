@@ -20,4 +20,19 @@ export class BlogListComponent implements OnInit {
     });
   }
 
+  updateSort(value) {
+    if (value === 'Newest') {
+      this.blogService.getBlogList()
+        .subscribe((data) => {
+          this.blogs = data;
+        });
+    }
+    if (value === 'Oldest') {
+      this.blogService.getReverseList()
+        .subscribe((data) => {
+          this.blogs = data;
+        });
+    }
+  }
+
 }
