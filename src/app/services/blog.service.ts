@@ -24,7 +24,7 @@ export class BlogService {
     this.blogChange.subscribe();
   }
 
-//GET A LIST OF ALL BLOGS BELONGING TO LOGGED IN USER
+  //GET A LIST OF ALL BLOGS BELONGING TO LOGGED IN USER
   getBlogList(){
     let options = new RequestOptions();
     options.withCredentials = true;

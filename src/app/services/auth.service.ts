@@ -52,7 +52,6 @@ export class AuthService {
   }
 
   google() {
-    console.log('running auth/google function');
     let options = new RequestOptions();
     options.withCredentials = true;
     return this.http.get(apiUrl + "/google", options).map(res => {

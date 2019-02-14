@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ClickOutsideModule } from "ng-click-outside";
 
-
 // MAIN APP
 import { AppComponent } from './app.component';
 
