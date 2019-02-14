@@ -3,10 +3,10 @@
   <a [routerLink]="['/profile/blogs']"><button class="blogs active">Blogs</button></a>
 </div>
 
-<select name="sortby" id="sortby">
+<select name="sortby" class="select-menu" id="sortby" (change)="updateSort($event.target.value)">
   <option value="" selected disabled>Sort by</option>
-  <option value="newest" selected>Newest</option>
-  <option value="oldest">Oldest</option>
+  <option value="Newest" selected>Newest</option>
+  <option value="Oldest">Oldest</option>
 </select>
 
   <!-- have button class be dependent on which component is displaying -->
