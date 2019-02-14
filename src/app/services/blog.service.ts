@@ -32,6 +32,14 @@ export class BlogService {
       .map((res: Response) => res.json());
   }
 
+  // LIST OF ALL POSTS (LOGGEN IN) - REVERSE ORDER
+  getReverseList() {
+    let options = new RequestOptions();
+    options.withCredentials = true;
+    return this.http.get(apiUrl + 'reverse', options)
+      .map((res: Response) => res.json());
+  }
+
   //GET THE DETAILS OF SELECTED BLOG
   getBlog(id: string){
     let options = new RequestOptions();
