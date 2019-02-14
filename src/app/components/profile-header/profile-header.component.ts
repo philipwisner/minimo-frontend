@@ -25,10 +25,6 @@ export class ProfileHeaderComponent implements OnInit {
     this.subscriptions.push(subscription);
   }
 
-  sortOldest() {
-    this.postService.getPostListOldest()
-  }
-
   ngOnDestroy() {
     this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }

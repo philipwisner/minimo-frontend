@@ -12,10 +12,10 @@ import { DatePipe } from '@angular/common'
   styleUrls: ['./feed-page.component.scss']
 })
 export class FeedPageComponent implements OnInit {
-user: User;
-posts: Object[];
-showStyle = false;
-expanded = false;
+  user: User;
+  posts: Object[];
+  showStyle = false;
+  expanded = false;
 
   constructor(private postService: PostService, private auth: AuthService, private router: Router) { }
   ngOnInit() {
