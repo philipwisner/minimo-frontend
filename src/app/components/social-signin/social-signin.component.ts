@@ -14,6 +14,7 @@ export class SocialSigninComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Add Google, facebook and twitter log in calls
   google() {
     this.auth.google().subscribe();
   }
