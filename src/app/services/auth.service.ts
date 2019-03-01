@@ -61,6 +61,8 @@ export class AuthService {
     });
   }
 
+  // make calls for facebook and twitter
+
   logout() {
     let options = new RequestOptions();
     options.withCredentials = true;
