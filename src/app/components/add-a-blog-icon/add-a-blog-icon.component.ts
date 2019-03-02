@@ -10,6 +10,7 @@ export class AddABlogIconComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  //refactor to be reusable for blog
   }
 
 }
