@@ -3,7 +3,7 @@ import { Observable }  from 'rxjs/Rx';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 
-
+//validate guards for not being logged in
 @Injectable()
 export class RequireAuthService implements CanActivate {
 
