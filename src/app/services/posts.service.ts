@@ -10,6 +10,7 @@ import { Post } from '../models/post';
 //LINK IN THE BACKEND TO FIND DATA
 const apiUrl = environment.apiUrl + '/posts/';
 
+// add delete and edit api calls
 @Injectable()
 export class PostService {
   new: any = {};
